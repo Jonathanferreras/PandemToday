@@ -1,13 +1,20 @@
 /* eslint-disable react/react-in-jsx-scope */
 import Head from 'next/head'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import { getArticles } from '../services/news/client'
 
 export default function Home () {
+  const [articles, setArticles] = useState(null)
+
   useEffect(() => {
-    fetch('/api/hello')
-      .then(res => res.json())
-      .then(data => console.log(data))
+    if (!articles) {
+      getArticles()
+        .then(data => setArticles(data.articles))
+    }
   })
+
+  console.log(articles)
+
   return (
     <div>
       <Head>
