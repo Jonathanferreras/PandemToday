@@ -4,7 +4,6 @@ export default async (req, res) => {
   try {
     const options = {}
     const data = await getArticles(options)
-
     res.statusCode = 200
     res.json(data)
   } catch (error) {
