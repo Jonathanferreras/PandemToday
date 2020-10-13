@@ -1,0 +1,7 @@
+Tasks
+------------------
+
+- Create a card
+- Main headline card
+- Create a header with menu
+- Create Tweets
