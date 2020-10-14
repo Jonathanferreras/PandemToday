@@ -5,8 +5,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: #F2F2F2;
-  margin-left: 20px;
-  margin-right: 20px;
+  /* margin-left: 20px;
+  margin-right: 20px; */
 }
 
 /* app colors
@@ -22,6 +22,50 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.content{
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.navbar{
+  width: 100vw;
+  height: 10vh;
+  background-color: white;
+}
+
+.logo{
+  color: '#E84393';
+  margin: 0;
+  padding-top: 20px;
+  float: left;
+}
+
+.menu{
+  float: right;
+  padding-top: 20px;
+}
+
+.menu a{
+  font-weight: bold;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.menu a:hover{
+  border-bottom: 5px solid #E84393;
+}
+
+.search-bar{
+  display: inline-block;
+}
+
+.search-bar input{
+  height: 33px;
+  width: 172px;
+  border-radius: 2em;
 }
 
 .card{

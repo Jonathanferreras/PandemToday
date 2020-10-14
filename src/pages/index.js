@@ -1,5 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import Head from 'next/head'
+import Navbar from '../../components/Navbar'
 import { useEffect, useState } from 'react'
 import { getArticles } from '../services/news/client'
 import Card from '../../components/card'
@@ -23,6 +24,8 @@ export default function Home () {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Navbar />
+
       <main>
         <h1>
           Welcome to <span style={{ color: '#E84393' }}>Pandem</span>Today
@@ -31,7 +34,7 @@ export default function Home () {
         <Card>
           <h2 className="card-title">Cases</h2>
           <div className="stats-area">
-            <div class="green-arrow-down"></div>
+            <div className="green-arrow-down"></div>
             <h1 className="case-numbers">34.2M</h1>
           </div>
         </Card>
@@ -39,16 +42,16 @@ export default function Home () {
         <Card>
           <h2 className="card-title">Recovered</h2>
           <div className="stats-area">
-            <div class="green-arrow-up"></div>
-            <h1 className="case-numbers">34.2M</h1>
+            <div className="green-arrow-up"></div>
+            <h1 className="case-numbers">23.7M</h1>
           </div>
         </Card>
 
         <Card>
           <h2 className="card-title">Deaths</h2>
           <div className="stats-area">
-            <div class="red-arrow-up"></div>
-            <h1 className="case-numbers">34.2M</h1>
+            <div className= "red-arrow-up"></div>
+            <h1 className="case-numbers">1.02M</h1>
           </div>
         </Card>
       </main>

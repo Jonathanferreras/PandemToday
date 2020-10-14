@@ -4,4 +4,7 @@ Tasks
 - Create a card
 - Main headline card
 - Create a header with menu
+  - Float menu to right
+  - Add on hover effect with pink line
+  - Create a searchbar
 - Create Tweets
