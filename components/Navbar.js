@@ -1,6 +1,11 @@
 import Link from 'next/link'
 import Head from 'next/head'
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import your icons
+import { faCode, faSearch } from '@fortawesome/free-solid-svg-icons';
+
 
 export default function Navbar(){
   return(
@@ -14,7 +19,8 @@ export default function Navbar(){
           <Link className="menu-item" href="/"><a>Resources</a></Link>
 
           <div className="search-bar">
-            <input type="text" name="search" placeholder="Search.." />
+            <input type="text" name="search" placeholder="Search" />
+            <FontAwesomeIcon icon={faSearch} className="sicon" />
           </div>
         </div>
       </div>
