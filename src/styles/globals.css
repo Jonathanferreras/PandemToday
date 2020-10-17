@@ -93,8 +93,17 @@ a {
 }
 
 .card-stats-area{
-  display: flex;
+  /* display: flex; */
 }
+
+.case-numbers{
+  /* float: right;
+  position: relative; */
+  margin-top: -30px;
+  padding-left: 160px;
+}
+
+
 
 .stats{
   width: 300px;
@@ -146,12 +155,4 @@ a {
   border-bottom: 15px solid #DC143C;
   margin-left: 25px;
   margin-top: 25px;
-}
-
-.case-numbers{
-  float: right;
-  position: relative;
-  margin-top: -30px;
-  padding-left: 120px;
-  padding-bottom: 10px;
 }
