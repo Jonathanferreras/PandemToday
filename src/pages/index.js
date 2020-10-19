@@ -3,6 +3,8 @@ import Head from 'next/head'
 import Layout from '../../components/Layout'
 import Navbar from '../../components/Navbar'
 import Stats from '../../components/Stats'
+import Headlines from '../../components/Headlines'
+
 import { useEffect, useState } from 'react'
 import { getArticles } from '../services/news/client'
 
@@ -30,8 +32,12 @@ export default function Home () {
 
       <main className="content">
 
+        <div className="main-area">
+          <Stats />
+          <Headlines />
+        </div>
 
-        <Stats />
+
 
 
       </main>
