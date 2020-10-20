@@ -4,7 +4,16 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #F2F2F2;
+  /* margin-left: 20px;
+  margin-right: 20px; */
 }
+
+/* app colors
+pink: #E844393
+background gray: #F2F2F2
+soft black: #3B3B3B
+gray: #ACACAC */
 
 a {
   color: inherit;
@@ -13,4 +22,137 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.content{
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.navbar{
+  width: 100vw;
+  height: 10vh;
+  background-color: white;
+}
+
+.logo{
+  color: '#E84393';
+  margin: 0;
+  padding-top: 20px;
+  float: left;
+}
+
+.sicon{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 26px;
+  right: 165px;
+}
+
+.menu{
+  float: right;
+  padding-top: 20px;
+}
+
+.menu a{
+  font-weight: bold;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.menu a:hover{
+  border-bottom: 5px solid #E84393;
+}
+
+.search-bar{
+  display: inline-block;
+}
+
+.search-bar input{
+  height: 33px;
+  width: 172px;
+  border-radius: 10px;
+  background-color: #F2F2F2;
+}
+
+.card{
+  background-color: white;
+  border-radius: 25px;
+  height: 134px;
+  width: 285px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.card-title{
+  padding: 13px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.card-stats-area{
+  /* display: flex; */
+}
+
+.case-numbers{
+  /* float: right;
+  position: relative; */
+  margin-top: -30px;
+  padding-left: 160px;
+}
+
+
+
+.stats{
+  width: 300px;
+}
+
+.filter{
+  display: inline-block;
+  width: 250px;
+}
+
+.stats-filter{
+  display: inline-block;
+  color: #E84393;
+  margin: 0;
+}
+
+.see-more{
+  display: inline-block;
+  float: right;
+  color: #ACACAC;
+  margin: 0;
+}
+
+.green-arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #7CFC00;
+  margin-left: 25px;
+  margin-top: 25px;
+}
+
+.green-arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #7CFC00;
+  margin-left: 25px;
+  margin-top: 25px;
+}
+
+.red-arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #DC143C;
+  margin-left: 25px;
+  margin-top: 25px;
 }

@@ -1,32 +1,40 @@
 /* eslint-disable react/react-in-jsx-scope */
 import Head from 'next/head'
+import Layout from '../../components/Layout'
+import Navbar from '../../components/Navbar'
+import Stats from '../../components/Stats'
 import { useEffect, useState } from 'react'
 import { getArticles } from '../services/news/client'
+
+
 
 export default function Home () {
   const [articles, setArticles] = useState(null)
 
-  useEffect(() => {
-    if (!articles) {
-      getArticles()
-        .then(data => setArticles(data.articles))
-    }
-  })
+  // useEffect(() => {
+  //   if (!articles) {
+  //     getArticles()
+  //       .then(data => setArticles(data.articles))
+  //   }
+  // })
 
   console.log(articles)
 
   return (
-    <div>
+    <Layout>
       <Head>
         <title>PandemToday</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1>
-          Welcome to <span style={{ color: '#E84393' }}>Pandem</span>Today
-        </h1>
+
+      <main className="content">
+
+
+        <Stats />
+
+
       </main>
-    </div>
+    </Layout>
   )
 }
