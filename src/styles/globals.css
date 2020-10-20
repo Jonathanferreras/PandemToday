@@ -103,7 +103,10 @@ a {
   padding-left: 160px;
 }
 
-
+.main-area{
+  display: flex;
+  width: 100vw;
+}
 
 .stats{
   width: 300px;
@@ -155,4 +158,44 @@ a {
   border-bottom: 15px solid #DC143C;
   margin-left: 25px;
   margin-top: 25px;
+}
+
+.headlines{
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.main-card{
+  width: 500px;
+  height: 500px;
+}
+
+.headline-pic{
+  width: 500px;
+  height:300px;
+  border-radius: 7px;
+}
+
+.headline-card{
+  background-color: white;
+  width: 500px;
+  height: 150px;
+  padding: 10px 10px 0 10px;
+  border-radius: 7px;
+}
+
+.headline-tag{
+  width: 100px;
+  background-color: #ffe7e7;
+  color: #e91e63;
+  text-align: center;
+  font-size: .8rem;
+  font-weight: bold;
+  border: 1px solid #e91e63;
+  border-radius: 25px;
+  margin: 2px 10px 10px 10px;
+}
+
+.headline-news{
+  font-weight: bold;
 }
