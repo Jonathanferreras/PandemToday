@@ -1,11 +1,8 @@
-import NewsAPI from 'newsapi'
-
-const newsApiKey = process.env.NEWSAPI_KEY
-const newsApi = new NewsAPI(newsApiKey)
+import newsapi from '../../config/newsApi'
 
 export async function getArticles (options) {
   try {
-    return await newsApi.v2.everything({
+    return await newsapi.v2.everything({
       ...options,
       q: 'covid'
     })
