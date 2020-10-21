@@ -8,6 +8,10 @@ import { faEye, faShareSquare } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function Headlines(){
+  const headlines = [
+    {news_headline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', headline_tag:'Coronavirus', headline_img: '/mnews-cv19.png'}
+  ]
+
   return(
     <div className="headlines">
       <h1>

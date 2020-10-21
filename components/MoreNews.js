@@ -8,6 +8,23 @@ import { faEye, faShareSquare } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function MoreNews(){
+  const news_articles = [
+    {title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', news_img: '/mnews-cv19.png'},
+    {title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', news_img: '/mnews-cv19.png'},
+    {title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', news_img: '/mnews-cv19.png'},
+    {title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', news_img: '/mnews-cv19.png'}
+  ]
+
+  const renderMoreNews = news_articles.map((article) => {
+    return(
+      <div className="more-news-item">
+        <img className="more-news-item-img" src={`${article.news_img}`}/>
+        <p className="more-news-item-story">{article.title}</p>
+      </div>
+      )
+    })
+
+
   return(
     <div className="more-news">
       <div className="heading">
@@ -16,22 +33,7 @@ export default function MoreNews(){
       </div>
 
       <div className="more-news-card">
-        <div className="more-news-item">
-          <img className="more-news-item-img" src="/mnews-cv19.png"/>
-          <p className="more-news-item-story">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div className="more-news-item">
-          <img className="more-news-item-img" src="/mnews-cv19.png"/>
-          <p className="more-news-item-story">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div className="more-news-item">
-          <img className="more-news-item-img" src="/mnews-cv19.png"/>
-          <p className="more-news-item-story">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div className="more-news-item">
-          <img className="more-news-item-img" src="/mnews-cv19.png"/>
-          <p className="more-news-item-story">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
+        {renderMoreNews}
       </div>
     </div>
   )
