@@ -4,6 +4,10 @@ import Layout from '../../components/Layout'
 import Navbar from '../../components/Navbar'
 import Stats from '../../components/Stats'
 import Headlines from '../../components/Headlines'
+import MoreNews from '../../components/MoreNews'
+import Tweets from '../../components/Tweets'
+
+
 
 import { useEffect, useState } from 'react'
 import { getArticles } from '../services/news/client'
@@ -35,10 +39,10 @@ export default function Home () {
         <div className="main-area">
           <Stats />
           <Headlines />
+          <MoreNews />
         </div>
 
-
-
+        <Tweets />
 
       </main>
     </Layout>

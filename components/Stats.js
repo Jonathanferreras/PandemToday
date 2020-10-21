@@ -5,6 +5,16 @@ import Card from './Card'
 
 
 export default function Stats(){
+  const stats = [
+    {title: 'Cases', stat: '34.2M'}
+  ];
+
+  // const renderStats = tweets.map((tweet) => {
+  //   return(
+  //
+  //   )
+  // })
+
   return(
     <div className="stats">
       <h1>
