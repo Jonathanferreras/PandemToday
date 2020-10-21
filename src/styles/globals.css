@@ -43,9 +43,44 @@ a {
   float: left;
 }
 
+.menu{
+  float: right;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu a{
+  font-weight: bold;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.menu a:hover{
+  border-bottom: 5px solid #E84393;
+}
+
+.links{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .search-bar{
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 33px;
   padding-right: 10px;
+  background-color: #F2F2F2;
+}
+
+.search-bar input{
+  height: 33px;
+  width: 172px;
+  border: 0;
+  background-color: #F2F2F2;
 }
 
 .sicon{
@@ -54,36 +89,6 @@ a {
   height: 20px;
   /* top: 26px;
   right: 165px; */
-}
-
-.menu{
-  float: right;
-  padding-top: 20px;
-  display: flex;
-}
-
-.menu a{
-  font-weight: bold;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding-bottom: 20px;
-}
-
-.menu a:hover{
-  border-bottom: 5px solid #E84393;
-}
-
-.links{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.search-bar input{
-  height: 33px;
-  width: 172px;
-  border-radius: 10px;
-  background-color: #F2F2F2;
 }
 
 .card{

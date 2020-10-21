@@ -4,7 +4,6 @@ import Head from 'next/head'
 
 export default function Card(props){
   const type = props.type;
-  console.log(type);
 
   if (type == 'tweet'){
       return(
