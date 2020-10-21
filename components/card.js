@@ -3,9 +3,22 @@ import Head from 'next/head'
 
 
 export default function Card(props){
-  return(
-    <div className="card">
-      {props.children}
-    </div>
-  )
+  const type = props.type;
+  console.log(type);
+
+  if (type == 'tweet'){
+      return(
+        <div className="tweet-card">
+          {props.children}
+        </div>
+      );
+  }
+  else{
+    return (
+      <div className="card">
+        {props.children}
+      </div>
+    );
+  }
+
 }

@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import your icons
-import { faCode, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faShareSquare } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function Headlines(){
@@ -22,7 +22,10 @@ export default function Headlines(){
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula lobortis enim, vitae lacinia lacus fringilla non.
           </div>
           <div className="social-stats">
-
+            <FontAwesomeIcon icon={faEye} className="social-stats-icons" />
+            <h7 className="social-stat-numbers">1.5k</h7>
+            <FontAwesomeIcon icon={faShareSquare} className="social-stats-icons" />
+            <h7 className="social-stat-numbers">200</h7>
           </div>
         </div>
       </div>

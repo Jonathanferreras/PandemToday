@@ -5,12 +5,13 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: #F2F2F2;
+  overflow-x: hidden;
   /* margin-left: 20px;
   margin-right: 20px; */
 }
 
 /* app colors
-pink: #E844393
+pink: #E84393
 background gray: #F2F2F2
 soft black: #3B3B3B
 gray: #ACACAC */
@@ -42,17 +43,23 @@ a {
   float: left;
 }
 
+.search-bar{
+  display: inline-block;
+  padding-right: 10px;
+}
+
 .sicon{
-  position: absolute;
+  /* position: absolute; */
   width: 20px;
   height: 20px;
-  top: 26px;
-  right: 165px;
+  /* top: 26px;
+  right: 165px; */
 }
 
 .menu{
   float: right;
   padding-top: 20px;
+  display: flex;
 }
 
 .menu a{
@@ -66,8 +73,10 @@ a {
   border-bottom: 5px solid #E84393;
 }
 
-.search-bar{
-  display: inline-block;
+.links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .search-bar input{
@@ -82,7 +91,6 @@ a {
   border-radius: 25px;
   height: 134px;
   width: 285px;
-  margin-left: 10px;
   margin-bottom: 10px;
 }
 
@@ -135,7 +143,7 @@ a {
   height: 0;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-bottom: 15px solid #7CFC00;
+  border-bottom: 15px solid #52D57F;
   margin-left: 25px;
   margin-top: 25px;
 }
@@ -173,7 +181,6 @@ a {
 .headline-pic{
   width: 500px;
   height:300px;
-  border-radius: 7px;
 }
 
 .headline-card{
@@ -181,7 +188,8 @@ a {
   width: 500px;
   height: 150px;
   padding: 10px 10px 0 10px;
-  border-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 
 .headline-tag{
@@ -198,4 +206,122 @@ a {
 
 .headline-news{
   font-weight: bold;
+}
+
+.social-stats{
+  float: right;
+  padding-top: 30px;
+}
+
+.social-stats-icons{
+  width: 30px;
+  height: 30px;
+  margin: 0 5px 0 5px;
+}
+
+.social-stat-numbers{
+  font-weight: bold;
+  padding-right: 5px;
+  padding-bottom: 2px;
+}
+
+.more-news{
+  height: 434px;
+  width: 455px;
+}
+
+.heading{
+  width: 100%;
+  display: inline-block;
+  margin-top: 21px;
+}
+
+.title{
+  display: inline-block;
+  margin-top: 0;
+}
+
+.heading h5{
+  padding-top: 25px;
+}
+
+.more-news-card{
+  background-color: white;
+  border-radius: 25px;
+  height: 464px;
+  width: 455px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.more-news-item{
+  height: 75px;
+  width: 100%;
+  padding: 30px 10px 10px 20px;
+  display: inline-block;
+}
+
+.more-news-item-img{
+  height: 80px;
+  width: 80px;
+  border-radius: 7px;
+  display: inline-block;
+
+}
+
+.more-news-item-story{
+  float: right;
+  width: 70%;
+  margin: 0;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.tweets{
+
+}
+
+.tweet-card{
+  background-color: white;
+  border-radius: 25px;
+  height: 134px;
+  width: 385px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.tweet-area{
+  height: 200px !important;
+  width: 388px !important;
+}
+
+.tweet-profile-pic{
+  height: 100px;
+  width: 100px;
+  border-radius: 7px;
+  padding: 10px 0px 0 10px;
+}
+
+.tweet{
+  float: right;
+}
+
+.tweet-user{
+  padding-top: 10px;
+}
+
+.twitter-username{
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.twitter-handle{
+  color: #E84393;
+}
+
+.tweet-body{
+  color: #909090;
+  margin: 0;
+  padding: 0 10px 0 10px;
 }
