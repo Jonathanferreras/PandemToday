@@ -19,7 +19,9 @@ export default function MoreNews(){
     return(
       <div className="more-news-item">
         <img className="more-news-item-img" src={`${article.news_img}`}/>
-        <p className="more-news-item-story">{article.title}</p>
+        <div className="more-news-item-story">
+          <p >{article.title}</p>
+        </div>
       </div>
       )
     })

@@ -15,7 +15,7 @@ export default function Headlines(){
   return(
     <div className="headlines">
       <h1>
-        Headlines
+        Top Headlines
       </h1>
 
       <div className="main-card">
