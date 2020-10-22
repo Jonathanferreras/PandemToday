@@ -37,7 +37,9 @@ export default function Tweets(){
       <div className="heading">
         <h1 className="title">Tweets</h1>
       </div>
-      {renderTweets}
+      <div>
+        {renderTweets}
+      </div>
     </div>
   )
 }
