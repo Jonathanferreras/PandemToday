@@ -13,7 +13,7 @@
     "@fortawesome/react-fontawesome": "^0.1.11",
     "axios": "^0.20.0",
     "newsapi": "^2.4.1",
-    "next": "9.5.3",
+    "next": "^9.5.5",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   },
