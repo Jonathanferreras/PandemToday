@@ -32,7 +32,7 @@ a {
 
 .navbar{
   width: 100vw;
-  height: 13vh;
+  height: 69px;
   background-color: white;
 }
 
@@ -297,13 +297,17 @@ a {
   margin-left: 310px;
 }
 
+.tweets-group{
+  display: inline-flex;
+}
+
 
 .tweet-card{
   background-color: white;
   border-radius: 25px;
   height: 105px;
   width: 270px;
-  margin-bottom: 10px;
+  margin: 0 15px 0 0;
   display: flex;
 }
 
