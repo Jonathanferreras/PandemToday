@@ -1,4 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
+// Card
 
 export default function Card (props) {
   const type = props.type
