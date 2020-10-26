@@ -1,15 +1,14 @@
-import Navbar from './Navbar';
-// import Footer from './Footer';
+/* eslint-disable react/prop-types */
+/* eslint-disable react/react-in-jsx-scope */
+import Navbar from './Navbar'
 
-
-const Layout = (props) => {
-  return(
+const Layout = ({ children }) => {
+  return (
     <div className="">
       <Navbar />
-      {props.children}
+      {children}
     </div>
   )
-
 }
 
-export default Layout;
+export default Layout
