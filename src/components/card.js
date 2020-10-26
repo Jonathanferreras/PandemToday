@@ -1,23 +1,19 @@
-import Link from 'next/link'
-import Head from 'next/head'
+/* eslint-disable react/react-in-jsx-scope */
 
+export default function Card (props) {
+  const type = props.type
 
-export default function Card(props){
-  const type = props.type;
-
-  if (type == 'tweet'){
-      return(
-        <div className="tweet-card">
-          {props.children}
-        </div>
-      );
-  }
-  else{
+  if (type === 'tweet') {
+    return (
+      <div className="tweet-card">
+        {props.children}
+      </div>
+    )
+  } else {
     return (
       <div className="card">
         {props.children}
       </div>
-    );
+    )
   }
-
 }
