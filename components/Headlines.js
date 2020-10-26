@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Link from 'next/link'
 import Head from 'next/head'
 
@@ -8,18 +9,22 @@ import { faEye, faShareSquare } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function Headlines(){
+  const [headlineNum, setheadlineNum] = useState(0);
+
   const headlines = [
-    {id: 1, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', tag:'Coronavirus', img: '/cv19.png'}
+    {id: 0, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', tag:'Coronavirus', img: '/cv19.png'},
+    {id: 1, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit2.', tag:'Coronavirus', img: '/cv19.png'},
+    {id: 2, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit3.', tag:'Coronavirus', img: '/cv19.png'}
   ]
 
   const renderHeadline = headlines.map((headline) => {
     return(
-      <div className="main-card" key={headline.id}>
-        <img className="headline-pic" src={`${headline.img}`} />
+      <div className="main-card" key={headlines[headlineNum].id}>
+        <img className="headline-pic" src={headlines[headlineNum].img} />
         <div className="headline-card">
-          <div className="headline-tag"> {headline.tag} </div>
+          <div className="headline-tag"> {headlines[headlineNum].tag}</div>
           <div className="headline-news">
-            {headline.title}
+            {headlines[headlineNum].title}
           </div>
           <div className="social-stats">
             <FontAwesomeIcon icon={faEye} className="social-stats-icons" />
@@ -32,11 +37,22 @@ export default function Headlines(){
       )
     })
 
+    const renderDots = headlines.map((headline) => {
+      return(
+        <div className="slide-control-dots"> </div>
+      )
+    })
+
   return(
     <div className="headlines">
       <h1>
         Top Headlines
       </h1>
+
+      <div className="slide-control">
+        {renderDots}
+      </div>
+
 
       {renderHeadline}
 
