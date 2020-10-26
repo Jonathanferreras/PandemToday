@@ -16,14 +16,15 @@ background gray: #F2F2F2
 soft black: #3B3B3B
 gray: #ACACAC */
 
+* {
+  box-sizing: border-box;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
 
 .content{
   margin-left: 5vw;
@@ -327,10 +328,10 @@ a {
 
 .tweet-card{
   background-color: white;
-  border-radius: 25px;
+  border-radius: 12px;
   height: 105px;
-  width: 270px;
-  margin: 0 15px 0 0;
+  width: 300px;
+  margin: 0 20px 0 0;
   display: flex;
 }
 
