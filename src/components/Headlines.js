@@ -15,11 +15,14 @@ export default function Headlines () {
 
   const headlines = [
     { id: 0, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', tag: 'Coronavirus', img: '/cv19.png' },
-    { id: 1, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit2.', tag: 'Coronavirus', img: '/cv19.png' },
-    { id: 2, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit3.', tag: 'Coronavirus', img: '/cv19.png' }
+    { id: 1, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit2.', tag: 'Coronavirus', img: '/mnews-cv19_2.jpg' },
+    { id: 2, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit3.', tag: 'Coronavirus', img: '/mnews-cv19.png' }
   ]
 
-  const renderHeadline = headlines.map((headline) => {
+  const renderHeadline = (headlineNum) => {
+    console.log('new headline')
+    console.log(headlineNum)
+
     return (
       <div className="main-card" key={headlines[headlineNum].id}>
         <img className="headline-pic" src={headlines[headlineNum].img} />
@@ -37,11 +40,20 @@ export default function Headlines () {
         </div>
       </div>
     )
-  })
+  }
 
-  const renderDots = headlines.map((headline) => {
+  const handleHeadlineDisplayed = (articleNum) => {
+    console.log('clicked headline')
+    console.log(articleNum)
+
+    setheadlineNum(articleNum)
+  }
+
+  const renderDots = headlines.map((headline, i) => {
+    const articleNum = i
+
     return (
-      <div className="slide-control-dots"> </div>
+      <div className='slide-control-dots' key={articleNum} onClick={(i) => handleHeadlineDisplayed(articleNum)}> </div>
     )
   })
 
@@ -55,7 +67,7 @@ export default function Headlines () {
         {renderDots}
       </div>
 
-      {renderHeadline}
+      {renderHeadline(headlineNum)}
 
     </div>
   )
