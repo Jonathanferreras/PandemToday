@@ -17,9 +17,9 @@ export default function Tweets () {
 
   ]
 
-  const renderTweets = tweets.map((tweet) => {
+  const renderTweets = tweets.map((tweet, tweet_id) => {
     return (
-      <TweetCard className="tweet-area" key={tweet.id}>
+      <TweetCard className="tweet-area" key={tweet_id}>
         <img className="tweet-profile-pic" src={`${tweet.profile_pic}`} />
         <div className="tweet">
           <div className="tweet-user">

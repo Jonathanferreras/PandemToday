@@ -34,7 +34,7 @@ export default function Stats () {
 
       <Card>
         <h2 className="card-title">Recovered</h2>
-        <div className="stats-area">
+        <div className="card-stats-area">
           <div className="green-arrow-up"></div>
           <h1 className="case-numbers">23.7M</h1>
         </div>
@@ -42,7 +42,7 @@ export default function Stats () {
 
       <Card>
         <h2 className="card-title">Deaths</h2>
-        <div className="stats-area">
+        <div className="card-stats-area">
           <div className= "red-arrow-up"></div>
           <h1 className="case-numbers">1.02M</h1>
         </div>

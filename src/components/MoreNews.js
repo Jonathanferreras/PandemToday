@@ -25,6 +25,7 @@ export default function MoreNews () {
           <p >{article.title}</p>
         </div>
       </div>
+      
     )
   })
 

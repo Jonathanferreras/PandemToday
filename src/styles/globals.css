@@ -25,31 +25,54 @@ a {
   text-decoration: none;
 }
 
-
-.content{
-  margin-left: 5vw;
-  margin-right: 7vw;
+h1{
+  font-size: 1.5rem;
 }
 
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.content{
+  /* margin-left: 50px;
+  margin-right: 50px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
 .navbar{
-  width: 100vw;
+  width: 100%;
   height: 69px;
   background-color: white;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-container{
+  width: 86%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo{
   color: '#E84393';
   margin: 0;
-  padding-top: 20px;
-  float: left;
 }
 
 .menu{
-  float: right;
-  padding-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: auto;
 }
 
 .menu a{
@@ -68,6 +91,11 @@ a {
   align-items: center;
 }
 
+.search-area{
+  width: 50px;
+  padding-top: 25px;
+}
+
 .search-bar{
   display: flex;
   justify-content: center;
@@ -75,12 +103,14 @@ a {
   height: 33px;
   padding-right: 10px;
   background-color: #F2F2F2;
+  border-radius: 7px;
 }
 
 .search-bar input{
   height: 33px;
   width: 172px;
   border: 0;
+  border-radius: 7px;
   background-color: #F2F2F2;
 }
 
@@ -95,41 +125,44 @@ a {
 .card{
   background-color: white;
   border-radius: 7px;
-  height: 105px;
-  width: 270px;
+  height: 90px;
+  width: 215px;
   margin-bottom: 30px;
 }
 
 .card-title{
   font-size: 1rem;
-  padding: 13px;
+  padding: 10px;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
 .card-stats-area{
-  /* display: flex; */
+  display: flex;
+  flex-direction: row;
 }
 
 .case-numbers{
-  /* float: right;
-  position: relative; */
-  margin-top: -30px;
-  padding-left: 160px;
+  margin-left: auto;
+  padding-right: 10px;
 }
 
-.main-area{
+.flex-container{
+  width: 100%;
   display: flex;
-  width: 100vw;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: row;
 }
 
 .stats{
-  width: 270px;
+
 }
 
 .filter{
-  display: inline-block;
-  width: 250px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .stats-filter{
@@ -139,10 +172,9 @@ a {
 }
 
 .see-more{
-  display: inline-block;
-  float: right;
   color: #ACACAC;
   margin: 0;
+  margin-left: auto;
 }
 
 .green-arrow-up {
@@ -175,14 +207,19 @@ a {
   margin-top: 25px;
 }
 
+.main-area{
+  width: 600px;
+  flex-direction: column;
+  margin: 0 30px;
+}
+
 .headlines{
-  margin-left: 30px;
-  margin-right: 30px;
+  /* margin-left: 30px;
+  margin-right: 30px; */
 }
 
 .main-card{
   width: 600px;
-  height: 465px;
 }
 
 .slide-control{
@@ -214,7 +251,7 @@ a {
 .headline-card{
   background-color: white;
   width: 600px;
-  height: 150px;
+  height: 120px;
   padding: 10px 10px 0 10px;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
@@ -238,7 +275,7 @@ a {
 
 .social-stats{
   float: right;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .social-stats-icons{
@@ -255,44 +292,32 @@ a {
 
 .more-news{
   height: 434px;
-  width: 455px;
+  width: 390px;
 }
 
 .heading{
-  width: 100%;
-  display: inline-block;
-  margin-top: 21px;
-}
-
-.title{
-  display: inline-block;
-  margin-top: 0;
-}
-
-.heading h5{
-  padding-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .more-news-card{
   background-color: white;
   border-radius: 7px;
-  height: 450px;
-  width: 445px;
-  margin-left: 10px;
+  height: 424px;
   margin-bottom: 10px;
 }
 
 .more-news-item{
-  height: 110px;
-  width: 100%;
-  padding: 20px 10px 10px 20px;
+  padding: 20px 10px 0 20px;
   /* margin-bottom: 20px; */
   display: flex;
+  justify-content: flex-start;
 }
 
 .more-news-item-img{
-  height: 90px;
-  width: 90px;
+  height: 80px;
+  width: 80px;
   border-radius: 7px;
   display: flex;
   justify-content: center;
@@ -314,7 +339,7 @@ a {
 }
 
 .tweets{
-  margin-left: 310px;
+
 }
 
 .tweets div{
@@ -329,20 +354,17 @@ a {
 .tweet-card{
   background-color: white;
   border-radius: 12px;
-  height: 105px;
-  width: 300px;
+  height: 90px;
+  width: 240px;
   margin: 0 20px 0 0;
   display: flex;
 }
 
-.tweet-area{
-  height: 200px !important;
-  width: 388px !important;
-}
+
 
 .tweet-profile-pic{
-  height: 70px;
-  width: 70px;
+  height: 65px;
+  width: 65px;
   border-radius: 7px;
   padding: 10px 0px 0 10px;
 }
@@ -352,22 +374,121 @@ a {
 }
 
 .tweet-user{
-  padding-top: 10px;
+
 }
 
 .twitter-username{
+  font-size: .85rem;
   font-weight: bold;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 .twitter-handle{
+  font-size: .85rem;
   color: #E84393;
 }
 
 .tweet-body{
   color: #909090;
-  font-size: .8rem;
+  font-size: .7rem;
   margin: 0;
-  padding: 0 10px 0 10px;
+  padding: 0 10px;
+}
+
+
+@media only screen and (max-width: 416px) {
+
+  .content{
+    width: 100%;
+    margin: 0;
+  }
+
+  .menu-icon{
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    margin-right: auto;
+    float: left;
+  }
+
+  .navbar{
+    display: flex;
+  }
+
+  .navbar .content{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .logo{
+    padding-left: 60px;
+  }
+
+  .main-area{
+    flex-direction: column;
+  }
+
+  .stats{
+    display: none;
+  }
+
+  .search-area{
+    width: 30px;
+  }
+
+  .sicon{
+    width: 30px;
+    height: 30px;
+  }
+
+  .headlines{
+    width: 414px;
+    margin: 0;
+  }
+
+  .headlines h1{
+    display: none;
+  }
+
+  .main-card{
+    width: 414px;
+    height: 350px;
+  }
+
+  .slide-control{
+    display: none;
+  }
+
+  .headline-pic{
+    width: 414px;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .headline-card{
+    width: 414px;
+    height: 110px;
+  }
+
+  .social-stats{
+    display: none;
+  }
+
+  .more-news{
+    width: 414px;
+  }
+
+  .more-news .heading{
+    display: none;
+  }
+
+  .more-news-card{
+    margin: 0;
+  }
+
+  .more-news-item{
+    border-bottom: 1px solid grey;
+  }
+
 }

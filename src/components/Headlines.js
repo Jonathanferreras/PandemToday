@@ -10,8 +10,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import your icons
 import { faEye, faShareSquare } from '@fortawesome/free-solid-svg-icons'
 
-export default function Headlines () {
+export default function Headlines (props) {
   const [headlineNum, setheadlineNum] = useState(0)
+
+  const width = props.screenwidth
+
+  console.log('headlines')
+  console.log(width)
 
   const headlines = [
     { id: 0, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', tag: 'Coronavirus', img: '/cv19.png' },
@@ -23,23 +28,43 @@ export default function Headlines () {
     console.log('new headline')
     console.log(headlineNum)
 
-    return (
-      <div className="main-card" key={headlines[headlineNum].id}>
-        <img className="headline-pic" src={headlines[headlineNum].img} />
-        <div className="headline-card">
-          <div className="headline-tag"> {headlines[headlineNum].tag}</div>
-          <div className="headline-news">
-            {headlines[headlineNum].title}
-          </div>
-          <div className="social-stats">
-            <FontAwesomeIcon icon={faEye} className="social-stats-icons" />
-            <h7 className="social-stat-numbers">1.5k</h7>
-            <FontAwesomeIcon icon={faShareSquare} className="social-stats-icons" />
-            <h7 className="social-stat-numbers">200</h7>
+    if (width <= 414) {
+      return (
+        <div className="main-card" key={headlines[headlineNum].id}>
+          <img className="headline-pic" src={headlines[headlineNum].img} />
+          <div className="headline-card">
+            <div className="headline-tag"> {headlines[headlineNum].tag}</div>
+            <div className="headline-news">
+              {headlines[headlineNum].title}
+            </div>
+            <div className="social-stats">
+              <FontAwesomeIcon icon={faEye} className="social-stats-icons" />
+              <h7 className="social-stat-numbers">1.5k</h7>
+              <FontAwesomeIcon icon={faShareSquare} className="social-stats-icons" />
+              <h7 className="social-stat-numbers">200</h7>
+            </div>
           </div>
         </div>
-      </div>
-    )
+      )
+    } else {
+      return(
+        <div className="main-card" key={headlines[headlineNum].id}>
+          <img className="headline-pic" src={headlines[headlineNum].img} />
+          <div className="headline-card">
+            <div className="headline-tag"> {headlines[headlineNum].tag}</div>
+            <div className="headline-news">
+              {headlines[headlineNum].title}
+            </div>
+            <div className="social-stats">
+              <FontAwesomeIcon icon={faEye} className="social-stats-icons" />
+              <h7 className="social-stat-numbers">1.5k</h7>
+              <FontAwesomeIcon icon={faShareSquare} className="social-stats-icons" />
+              <h7 className="social-stat-numbers">200</h7>
+            </div>
+          </div>
+        </div>
+      )
+    }
   }
 
   const handleHeadlineDisplayed = (articleNum) => {
