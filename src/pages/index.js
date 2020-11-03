@@ -1,10 +1,10 @@
 /* eslint-disable react/react-in-jsx-scope */
 import Head from 'next/head'
 import Layout from '../components/Layout'
-import Stats from '../components/Stats'
-import Headlines from '../components/Headlines'
-import MoreNews from '../components/MoreNews'
-import Tweets from '../components/Tweets'
+import Stats from '../components/Stats/Stats'
+import Headlines from '../components/Headlines/Headlines'
+import MoreNews from '../components/MoreNews/MoreNews'
+import Tweets from '../components/Tweets/Tweets'
 
 export default function Home () {
   const [width, setWidth] = React.useState(0)

@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import React, { useState, useEffect } from 'react'
-
+import styles from './Navbar.module.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import your icons

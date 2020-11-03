@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/react-in-jsx-scope */
 import Head from 'next/head'
-import Navbar from './Navbar'
+import Navbar from './Navbar/Navbar'
 
 const Layout = ({ children }) => {
   return (

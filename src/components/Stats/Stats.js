@@ -1,7 +1,9 @@
 /* eslint-disable react/react-in-jsx-scope */
 import Link from 'next/link'
 import Head from 'next/head'
-import Card from './Card'
+import Card from '../Card/Card'
+import styles from './Stats.module.css'
+
 
 export default function Stats () {
   const stats = [
