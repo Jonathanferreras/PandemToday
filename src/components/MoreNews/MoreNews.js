@@ -3,7 +3,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import Link from 'next/link'
 import Head from 'next/head'
-
+import styles from './MoreNews.module.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import your icons
@@ -17,14 +17,15 @@ export default function MoreNews () {
     { title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', news_img: '/mnews-cv19.png' }
   ]
 
-  const renderMoreNews = news_articles.map((article) => {
+  const renderMoreNews = news_articles.map((article, article_num) => {
     return (
-      <div className="more-news-item">
+      <div className="more-news-item" key={article_num}>
         <img className="more-news-item-img" src={`${article.news_img}`}/>
         <div className="more-news-item-story">
           <p >{article.title}</p>
         </div>
       </div>
+      
     )
   })
 

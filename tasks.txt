@@ -1,5 +1,23 @@
 Tasks
 ------------------
 
-- Use state to map headline to slider control dots
 - Make mobile responsive
+
+
+Notes:
+Use screen width and pass as prop to elements via index.js
+Or Create react hook in code that gets screen width and conditionally renders code based on width such as Navbar component
+
+Faded text for tweets longer certain amt of characters or show full tweet in modal -- implement via link
+
+
+flex 
+
+margin left: auto
+width: 1000px
+
+justify content on main
+
+columns
+
+"The NFL says Sunday's game between the Pittsburgh Steelers and the Tennessee Titans has been postponed after the Ti… https://t.co/HBd2Nvty9j"

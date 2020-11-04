@@ -1,5 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 // Card
+import styles from './Card.module.css'
 
 export default function Card (props) {
   const type = props.type

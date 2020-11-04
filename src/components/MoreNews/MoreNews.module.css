@@ -1,0 +1,47 @@
+.more-news{
+    height: 434px;
+    width: 390px;
+  }
+  
+  .heading{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .more-news-card{
+    background-color: white;
+    border-radius: 7px;
+    height: 424px;
+    margin-bottom: 10px;
+  }
+  
+  .more-news-item{
+    padding: 20px 10px 0 20px;
+    /* margin-bottom: 20px; */
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .more-news-item-img{
+    height: 80px;
+    width: 80px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .more-news-item-story{
+    width: 250px;
+    margin: 0;
+    padding-left: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .more-news-item-story p{
+    margin: 0;
+  }
