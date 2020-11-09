@@ -16,12 +16,19 @@
     padding-top: 10px;
   }
   
-  .slide-control-dots{
+  .slide-control-dot{
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: #E84393;
     margin-bottom: 10px;
+  }
+
+  .slide-control-dot-active{
+    background-color: #E84393;
+  }
+
+  .slide-control-dot-inactive{
+    background-color: black;
   }
 
   .overlay{

@@ -12,6 +12,8 @@ import { faEye, faShareSquare } from '@fortawesome/free-solid-svg-icons'
 
 export default function Headlines (props) {
   const [headlineNum, setheadlineNum] = useState(0)
+  const [activeDot, setActiveDot] = useState(0)
+
 
   const width = props.screenwidth
 
@@ -75,15 +77,16 @@ export default function Headlines (props) {
   const handleHeadlineDisplayed = (articleNum) => {
     console.log('clicked headline')
     console.log(articleNum)
-
+    setActiveDot(articleNum)
     setheadlineNum(articleNum)
   }
 
   const renderDots = headlines.map((headline, i) => {
     const articleNum = i
+    const sliderDotClass = 'slide-control-dot '
 
     return (
-      <div className='slide-control-dots' key={articleNum} onClick={(i) => handleHeadlineDisplayed(articleNum)}> </div>
+      <div className={activeDot === articleNum ? sliderDotClass + 'slide-control-dot-active' : sliderDotClass + 'slide-control-dot-inactive'} key={articleNum} onClick={(i) => handleHeadlineDisplayed(articleNum)}> </div>
     )
   })
 
