@@ -22,7 +22,11 @@ export default function Stats () {
         Stats
       </h1>
       <div className="filter">
-        <h4 className="stats-filter">Global</h4>
+        <a className="stats-filter">
+          <h4 className="global-txt">Global</h4>
+          <div className="grey-arrow-down"></div>
+        </a>
+        
         <h5 className="see-more">See More</h5>
       </div>
 

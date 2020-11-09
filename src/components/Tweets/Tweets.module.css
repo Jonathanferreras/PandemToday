@@ -14,17 +14,19 @@
 .tweet-card{
   background-color: white;
   border-radius: 12px;
-  height: 90px;
-  width: 240px;
-  margin: 0 20px 0 0;
+  height: 80px;
+  width: 215px;
+  margin: 0 15px 0 0;
   display: flex;
+  overflow-y: hidden;
+
 }
 
 
 
 .tweet-profile-pic{
-  height: 65px;
-  width: 65px;
+  height: 55px;
+  width: 55px;
   border-radius: 7px;
   padding: 10px 0px 0 10px;
 }
@@ -38,20 +40,20 @@
 }
 
 .twitter-username{
-  font-size: .85rem;
+  font-size: .7rem;
   font-weight: bold;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .twitter-handle{
-  font-size: .85rem;
+  font-size: .7rem;
   color: #E84393;
 }
 
 .tweet-body{
   color: #909090;
-  font-size: .7rem;
+  font-size: .6rem;
   margin: 0;
-  padding: 0 10px;
+  padding: 0 5px;
 }

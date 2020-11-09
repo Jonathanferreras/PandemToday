@@ -35,42 +35,55 @@ h1{
   justify-content: center;
 }
 
-.content{
-  /* margin-left: 50px;
-  margin-right: 50px; */
+
+.flex-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 100px;
+}
+
+.flex-content{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5px;
+}
+
+
+
+.main-area{
+  width: 675px;
+  flex-direction: column;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.grey-arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid   #ACACAC;
+  margin-top: 2px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.dropdown {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-
-
-
-
-
-
-
-
-.flex-container{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-direction: row;
+.dropdown-list{
+  list-style-type: none;
 }
 
-
-
-
-
-.main-area{
-  width: 600px;
-  flex-direction: column;
-  margin: 0 30px;
+.dropdown-menu-closed{
+  display: none;
 }
-
-
 
 
 @media only screen and (max-width: 416px) {

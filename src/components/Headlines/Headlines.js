@@ -47,9 +47,14 @@ export default function Headlines (props) {
         </div>
       )
     } else {
-      return(
+      return (
         <div className="main-card" key={headlines[headlineNum].id}>
-          <img className="headline-pic" src={headlines[headlineNum].img} />
+            <div className="slide-control">
+              {renderDots}
+            </div>
+          <div className="overlay">
+            <img className="headline-pic" src={headlines[headlineNum].img} />
+          </div>
           <div className="headline-card">
             <div className="headline-tag"> {headlines[headlineNum].tag}</div>
             <div className="headline-news">
@@ -88,8 +93,8 @@ export default function Headlines (props) {
         Top Headlines
       </h1>
 
-      <div className="slide-control">
-        {renderDots}
+      <div>
+
       </div>
 
       {renderHeadline(headlineNum)}

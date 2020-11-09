@@ -3,61 +3,69 @@
 }
 
 .filter{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  
-  .stats-filter{
-    display: inline-block;
-    color: #E84393;
-    margin: 0;
-  }
-  
-  .see-more{
-    color: #ACACAC;
-    margin: 0;
-    margin-left: auto;
-  }
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
-  .card-stats-area{
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .green-arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 15px solid #52D57F;
-    margin-left: 25px;
-    margin-top: 25px;
-  }
-  
-  .green-arrow-down {
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 15px solid #52D57F;
-    margin-left: 25px;
-    margin-top: 25px;
-  }
-  
-  .red-arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 15px solid #DC143C;
-    margin-left: 25px;
-    margin-top: 25px;
-  }
+.stats-filter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  
-  
-  .case-numbers{
-    margin-left: auto;
-    padding-right: 10px;
-  }
+.global-txt{
+  color: #E84393;
+  margin: 0;
+}
+
+.see-more{
+  color: #ACACAC;
+  margin: 0;
+  margin-left: auto;
+}
+
+.card-stats-area{
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+.green-arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #52D57F;
+  margin-left: 25px;
+  margin-top: 25px;
+}
+
+.green-arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #52D57F;
+  margin-left: 25px;
+  margin-top: 25px;
+}
+
+.red-arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #DC143C;
+  margin-left: 25px;
+  margin-top: 25px;
+}
+
+
+
+.case-numbers{
+  font-size: 1.4rem;
+  margin-left: auto;
+  padding-right: 10px;
+}

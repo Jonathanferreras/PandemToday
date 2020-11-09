@@ -21,3 +21,27 @@ justify content on main
 columns
 
 "The NFL says Sunday's game between the Pittsburgh Steelers and the Tennessee Titans has been postponed after the Ti… https://t.co/HBd2Nvty9j"
+
+
+
+padding left of searchbar  *done
+
+down arrow next to global for dropdown menu, featuring US, Europe, China
+
+Pink line to indicate what page user is on, make other links light gray  MVP
+
+carousel needs to change at an interval
+
+ - make only pink dot for active carousel
+        make state active-dot
+        change active-dot color to pink
+
+extra transparent layer on carousel  *done
+
+smaller arrows in stats  *done
+
+make tweets fit in same column as top headlines  *done
+
+adjust top headlines card *done
+
+redesign containers for navbar and landing content to use same container class

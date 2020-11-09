@@ -4,7 +4,7 @@
   }
   
   .main-card{
-    width: 600px;
+    width: 675px;
   }
   
   .slide-control{
@@ -12,32 +12,40 @@
     height: 90px;
     z-index: 3;
     position: absolute;
-    right: 100;
-    padding-left: 575px;
+    padding-left: 655px;
     padding-top: 10px;
   }
   
   .slide-control-dots{
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background-color: #E84393;
     margin-bottom: 10px;
-    z-index: 3;
+  }
+
+  .overlay{
+    background-color: rgba(0,0,0,0.7);
+    height: 300px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    z-index: 2;
   }
   
   .headline-pic{
-    width: 600px;
-    height:300px;
+    width: 675px;
+    height: 300px;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
+    opacity: .4;
+    z-index: 1;
   }
   
   .headline-card{
     background-color: white;
-    width: 600px;
+    width: 675px;
     height: 120px;
-    padding: 10px 10px 0 10px;
+    padding: 10px 10px 0 20px;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
   }
@@ -56,6 +64,7 @@
   
   .headline-news{
     font-weight: bold;
+    padding-left: 10px;
   }
   
   .social-stats{
