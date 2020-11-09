@@ -32,7 +32,7 @@ Pink line to indicate what page user is on, make other links light gray  MVP
 
 carousel needs to change at an interval
 
- - make only pink dot for active carousel
+ - make only pink dot for active carousel  *done
         make state active-dot
         change active-dot color to pink
 

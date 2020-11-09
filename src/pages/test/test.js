@@ -14,21 +14,21 @@ export default function test () {
     { locale: 'Asia' }
   ]
 
-  var filterShown = selectedLocale
-
   const handleMenu = () => setOpenMenu(!openMenu)
 
   const handleSelectedLocale = () => setSelectedLocale(id)
 
   useEffect(() => {  
-      document.h4 = selectedLocale;  
+      if (selectedLocale) {
+
+      }
     });
 
 
   const renderFilters = filters.map((filter, id) => {
     // console.log(filters[id])
     return (
-      <li key={id} onClick={(id) => setSelectedLocale(id)}>
+      <li key={id} onClick={() => setSelectedLocale(id)}>
         {filter.locale}
       </li>
     )
@@ -38,7 +38,7 @@ export default function test () {
   return (
     <div className="dropdown">
       <div className="stats-filter" onClick={handleMenu}>
-        <h4 className="global-txt">{filters[filterShown].locale}</h4>
+        <h4 className="global-txt">{filters[selectedLocale].locale}</h4>
         <div className="grey-arrow-down"></div>
       </div>
       <ul className={openMenu ? "dropdown-menu" : "dropdown-menu-closed"}>

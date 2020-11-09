@@ -19,7 +19,7 @@ export default function Navbar () {
     console.log(width)
     if (width <= 414) {
       return (
-        <div className="content">
+        <div className="navbar-content">
           <img className="menu-icon" src='/menu.png' />
           <h2 className="logo"><span style={{ color: '#E84393' }}>PANDEM</span>TODAY</h2>
           <div className="search-area">

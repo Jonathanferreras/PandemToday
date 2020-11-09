@@ -88,30 +88,28 @@ h1{
 
 @media only screen and (max-width: 416px) {
 
-  .content{
-    width: 100%;
-    margin: 0;
+  .navbar{
+    padding: 0 !important;
+  }
+
+  .navbar-content{
+    width: 500px;
+    padding-left: 15px;
   }
 
   .menu-icon{
     width: 30px;
     height: 30px;
-    margin-top: 20px;
-    margin-right: auto;
-    float: left;
   }
 
   .navbar{
     display: flex;
   }
 
-  .navbar .content{
-    margin-left: 10px;
-    margin-right: 10px;
-  }
 
   .logo{
-    padding-left: 60px;
+    display: block;
+    margin: 0 auto !important;
   }
 
   .main-area{
@@ -124,6 +122,7 @@ h1{
 
   .search-area{
     width: 30px;
+    padding: 0 !important; 
   }
 
   .sicon{
@@ -131,8 +130,23 @@ h1{
     height: 30px;
   }
 
+  .flex-container{
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .flex-content{
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  .main-area{
+    height: auto !important;
+    margin: 0;
+  }
+
   .headlines{
-    width: 414px;
+    width: auto;
     margin: 0;
   }
 
@@ -141,8 +155,7 @@ h1{
   }
 
   .main-card{
-    width: 414px;
-    height: 350px;
+    width: 414px !important;
   }
 
   .slide-control{
@@ -150,14 +163,21 @@ h1{
   }
 
   .headline-pic{
-    width: 414px;
+    width: 414px !important;
     height: auto;
     border-radius: 0;
   }
 
   .headline-card{
-    width: 414px;
-    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 414px !important;
+    padding: 0 !important;
+  }
+
+  .headline-news{
+    width: 385px !important;
   }
 
   .social-stats{
@@ -165,7 +185,7 @@ h1{
   }
 
   .more-news{
-    width: 414px;
+    width: 414px !important;
   }
 
   .more-news .heading{

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/react-in-jsx-scope */
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import styles from './Headlines.module.css'
@@ -26,9 +26,30 @@ export default function Headlines (props) {
     { id: 2, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit3.', tag: 'Coronavirus', img: '/mnews-cv19.png' }
   ]
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      console.log('Interval')
+      const activeHeadlineNum = headlineNum
+      console.log(activeHeadlineNum)
+      console.log(headlines.length)
+      if (activeHeadlineNum === headlines.length - 1) {
+        setheadlineNum(0);
+        setActiveDot(0)
+      }
+      else{
+        setheadlineNum(headlineNum => headlineNum + 1);
+        setActiveDot(activeDot => activeDot + 1)
+      }
+    }, 10000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   const renderHeadline = (headlineNum) => {
-    console.log('new headline')
-    console.log(headlineNum)
+    // console.log('new headline')
+    // console.log(headlineNum)
 
     if (width <= 414) {
       return (
