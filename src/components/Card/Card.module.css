@@ -4,6 +4,7 @@
     height: 88px;
     width: 190px;
     margin-bottom: 30px;
+    z-index: -1;
   }
   
   .card-title{

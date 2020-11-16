@@ -24,6 +24,7 @@ export default function MoreNews () {
         <div className="more-news-item-story">
           <p >{article.title}</p>
         </div>
+        <hr className="more-item-divider" />
       </div>
       
     )

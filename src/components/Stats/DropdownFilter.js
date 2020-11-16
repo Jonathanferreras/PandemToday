@@ -34,9 +34,12 @@ export default function test () {
         <h4 className="global-txt">{filters[selectedLocale].locale}</h4>
         <div className="grey-arrow-down"></div>
       </div>
-      <ul className={openMenu ? "dropdown-menu" : "dropdown-menu-closed"}>
-        {renderFilters}
-      </ul>
+      <div>
+        <ul className={openMenu ? "dropdown-menu" : "dropdown-menu-closed"}>
+            {renderFilters}
+        </ul>
+      </div>
+      
     </div>
 
   )

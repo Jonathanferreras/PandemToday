@@ -11,6 +11,7 @@
   
   .navbar-content{
     width: 100%;
+    max-width: 1319px;
     display: flex;
     justify-content: center;
     align-items: center;

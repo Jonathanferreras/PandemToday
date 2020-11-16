@@ -12,7 +12,7 @@
   .more-news-card{
     background-color: white;
     border-radius: 7px;
-    height: 424px;
+    height: 420px;
     margin-bottom: 10px;
   }
   
@@ -21,7 +21,10 @@
     /* margin-bottom: 20px; */
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap
   }
+
+ 
   
   .more-news-item-img{
     height: 80px;

@@ -30,7 +30,7 @@ down arrow next to global for dropdown menu, featuring US, Europe, China
 
 Pink line to indicate what page user is on, make other links light gray  MVP
 
-carousel needs to change at an interval
+carousel needs to change at an interval *done
 
  - make only pink dot for active carousel  *done
         make state active-dot
@@ -45,3 +45,13 @@ make tweets fit in same column as top headlines  *done
 adjust top headlines card *done
 
 redesign containers for navbar and landing content to use same container class
+
+
+Make whole headline card with picture link
+        on hover on a tag, box shadow around the outside the card
+
+
+Have only have headlines and more news load once.
+        - have a update button if their new items to refresh page.
+
+Attempt three times for data, and show error fetching data.

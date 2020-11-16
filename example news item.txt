@@ -1,0 +1,9 @@
+"articles":[{
+    "source":{"id":"fox-news","name":"Fox News"},
+"author":"Fox News",
+"title":"Biden COVID-19 adviser suggests potential lockdown lasting over a month",
+"description":"One of President-elect Joe Biden’s coronavirus advisers floated the idea of a nationwide coronavirus lockdown in an effort to rein in the illness and rejuvenate the economy as new cases climb once again.",
+url:"https://www.foxbusiness.com/economy/biden-covid-19-adviser-lockdown",
+"urlToImage":"https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2020/11/0/0/Michael-Osterholm-GETTY.jpg?ve=1&tl=1",
+"publishedAt":"2020-11-12T01:07:21.794443Z",
+"content":"One of President-elect Joe Biden’s coronavirus advisers floated the idea of a nationwide coronavirus lockdown in an effort to rein in the illness and rejuvenate the economy as new cases climb once ag… [+2227 chars]"}
