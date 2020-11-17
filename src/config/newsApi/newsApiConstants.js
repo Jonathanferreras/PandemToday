@@ -15,3 +15,7 @@ export const NEWS_SOURCES = `
   time,
   usa-today
 `
+export const NEWS_API_ENDPOINTS = {
+  articles: '/api/news/articles',
+  headlines: '/api/news/headlines'
+}
