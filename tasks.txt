@@ -55,3 +55,13 @@ Have only have headlines and more news load once.
         - have a update button if their new items to refresh page.
 
 Attempt three times for data, and show error fetching data.
+
+
+Mobile View
+Stats bar
+        - small horizontal bar with stat #s
+Headlines
+More news
+        - one piece stories in one box
+Tweets 
+        - looks stats with individual cards with margin top and bottom

@@ -11,6 +11,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import your icons
 import { faEye, faShareSquare } from '@fortawesome/free-solid-svg-icons'
 
+import {getHeadlinesForLandingPage} from '../../services/news/client'
+
 export default function Headlines (props) {
   const [headlineNum, setheadlineNum] = useState(0)
   const [activeDot, setActiveDot] = useState(0)
@@ -44,7 +46,12 @@ export default function Headlines (props) {
   }
 
   useEffect(() => {
-    getHeadlineArticles()
+    getHeadlinesForLandingPage()
+      .then(data => {
+        setData(data.articles)
+        setDataLoading(true)
+      })
+
   }, [])
 
   const cycleHeadlines = () => {
@@ -57,13 +64,13 @@ export default function Headlines (props) {
     }
   }
 
-  // useEffect(() => {
-  //   const interval = setInterval(cycleHeadlines, 5000)
+  useEffect(() => {
+    const interval = setInterval(cycleHeadlines, 5000)
 
-  //   return () => {
-  //     clearInterval(interval)
-  //   }
-  // }, [headlineNum])
+    return () => {
+      clearInterval(interval)
+    }
+  }, [headlineNum])
 
   const loadingAnimation = () => {
     return (
@@ -82,23 +89,23 @@ export default function Headlines (props) {
 
   const renderHeadlineCard = () => {
     return (
-      <div className="main-card box" key={headlines[headlineNum].id}>
-        <Link href={headlines[headlineNum].url ? headlines[headlineNum].url : '/'}>
+      <div className="main-card box" key={data[headlineNum].id}>
+        <Link href={data[headlineNum].url ? data[headlineNum].url : '/'}>
           <a className=''>
             <div className="slide-control">
               {renderDots}
             </div>
             <div className="overlay">
-              <img className="headline-pic" src={data ? data[headlineNum].urlToImage : headlines[headlineNum].urlToImage} />
+              <img className="headline-pic" src={data[headlineNum].urlToImage} />
             </div>
             <div className="headline-card">
               <div className="headline-tag"> {headlines[headlineNum].tag}</div>
               <div className="headline-news">
-                {headlines[headlineNum].title}
+                {data[headlineNum].title}
 
               </div>
               <div className="social-stats">
-                <b className="pink">Source:  </b> {headlines[headlineNum].author}
+                <b className="pink">Source:  </b> {data[headlineNum].author}
 
               </div>
             </div>
