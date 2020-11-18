@@ -28,7 +28,6 @@ export default function Headlines (props) {
     { id: 2, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit3.', tag: 'Coronavirus', img: '/mnews-cv19.png' }
   ]
 
-
   const getHeadlineArticles = async () => {
     const result = await axios(
       'http://localhost:3000/api/news/headlines'
@@ -38,18 +37,14 @@ export default function Headlines (props) {
 
     // let articles = []
 
-    let headline_articles = result.data.articles.slice(0, 3)
+    const headline_articles = result.data.articles.slice(0, 3)
 
     setData(headline_articles)
     setDataLoading(true)
   }
 
   useEffect(() => {
-
     getHeadlineArticles()
-
-
-    
   }, [])
 
   const cycleHeadlines = () => {
@@ -71,44 +66,44 @@ export default function Headlines (props) {
   // }, [headlineNum])
 
   const loadingAnimation = () => {
-    return(
-      <div class="loading bar">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+    return (
+      <div className="loading bar">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     )
   }
 
   const renderHeadlineCard = () => {
-    return(
+    return (
       <div className="main-card box" key={headlines[headlineNum].id}>
-          <Link href={headlines[headlineNum].url ? headlines[headlineNum].url : '/'}>
-            <a className=''>
-              <div className="slide-control">
-                {renderDots}
-              </div>
-              <div className="overlay">
-                <img className="headline-pic" src={data ? data[headlineNum].urlToImage : headlines[headlineNum].urlToImage} />
-              </div>
-              <div className="headline-card">
-                <div className="headline-tag"> {headlines[headlineNum].tag}</div>
-                <div className="headline-news">
-                  {headlines[headlineNum].title}
+        <Link href={headlines[headlineNum].url ? headlines[headlineNum].url : '/'}>
+          <a className=''>
+            <div className="slide-control">
+              {renderDots}
+            </div>
+            <div className="overlay">
+              <img className="headline-pic" src={data ? data[headlineNum].urlToImage : headlines[headlineNum].urlToImage} />
+            </div>
+            <div className="headline-card">
+              <div className="headline-tag"> {headlines[headlineNum].tag}</div>
+              <div className="headline-news">
+                {headlines[headlineNum].title}
 
-                </div>
-                <div className="social-stats">
-                  <b className="pink">Source:  </b> {headlines[headlineNum].author}
-
-                </div>
               </div>
-            </a></Link>
-        </div>
+              <div className="social-stats">
+                <b className="pink">Source:  </b> {headlines[headlineNum].author}
+
+              </div>
+            </div>
+          </a></Link>
+      </div>
     )
   }
 
@@ -137,15 +132,14 @@ export default function Headlines (props) {
     } else {
       return (
         <React.Fragment>
-          {dataLoading  ? renderHeadlineCard() : loadingAnimation()}
+          {dataLoading ? renderHeadlineCard() : loadingAnimation()}
 
         </React.Fragment>
-        
+
       )
     }
   }
 
-  
   const handleHeadlineDisplayed = (articleNum) => {
     console.log('clicked headline')
     console.log(articleNum)
