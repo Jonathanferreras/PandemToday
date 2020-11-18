@@ -3,8 +3,10 @@ import { getArticles } from '../../../services/news/server'
 
 export default async (req, res) => {
   try {
-    if (req.method !== 'GET' || req.method !== 'POST') {
-      throw new Error('Unsupported method received!')
+    if (req.method !== 'GET' && req.method !== 'POST') {
+      res.statusCode = 404
+      res.json({ message: `Unsupported method ${req.method} received.` })
+      return
     }
 
     const options = {
@@ -14,7 +16,13 @@ export default async (req, res) => {
     }
 
     if (req.method === 'POST') {
-      options.page = req.body.page
+      if (req.body.page) {
+        options.page = req.body.page
+      }
+
+      if (req.body.pageSize) {
+        options.pageSize = req.body.pageSize
+      }
     }
 
     const data = await getArticles(options)
