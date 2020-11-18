@@ -19,7 +19,7 @@ export default function Stats () {
 
   return (
     <div className="stats">
-      <h1>
+      <h1 className="title"> 
         Stats
       </h1>
       <div className="filter">

@@ -40,17 +40,15 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 100px;
 }
 
 .flex-content{
   display: flex;
   justify-content: center;
   width: 100%;
+  max-width: 1319px;
   margin-top: 5px;
 }
-
-
 
 .main-area{
   width: 675px;
@@ -97,7 +95,41 @@ h1{
   display: none;
 }
 
-@media only screen and (max-width: 416px) {
+@media only screen and (max-width: 1200px) {
+  .flex-content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 5px;
+  }
+
+  .main-area{
+    width: 375px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .flex-content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 650px;
+    margin-top: 5px;
+  }
+
+  .main-area{
+    width: 335px;
+    margin: 0 15px;
+  }
+
+  .title{
+    font-size: 1.2rem;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
 
   .navbar{
     padding: 0 !important;

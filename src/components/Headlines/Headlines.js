@@ -15,7 +15,7 @@ export default function Headlines (props) {
   const [headlineNum, setheadlineNum] = useState(0)
   const [activeDot, setActiveDot] = useState(0)
   const [data, setData] = useState(null)
-  const [dataLoaded, setDataLoaded] = useState(false)
+  const [dataLoading, setDataLoading] = useState(false)
 
   const width = props.screenwidth
 
@@ -27,6 +27,7 @@ export default function Headlines (props) {
     { id: 1, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit2.', tag: 'Coronavirus', img: '/mnews-cv19_2.jpg' },
     { id: 2, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit3.', tag: 'Coronavirus', img: '/mnews-cv19.png' }
   ]
+
 
   const getHeadlineArticles = async () => {
     const result = await axios(
@@ -40,28 +41,16 @@ export default function Headlines (props) {
     let headline_articles = result.data.articles.slice(0, 3)
 
     setData(headline_articles)
-    setDataLoaded(true)
+    setDataLoading(true)
   }
 
   useEffect(() => {
-    if (data) {
-      console.log('if')
-      const interval = setInterval(getHeadlineArticles, 60000)
 
-      return () => {
-        console.log(data)
-        clearInterval(interval)
-      }
-    } else {
-      console.log('else')
-      getHeadlineArticles()
-      
-      return () => {
-        console.log(data)
-      }
-    }
+    getHeadlineArticles()
+
+
     
-  }, [data])
+  }, [])
 
   const cycleHeadlines = () => {
     if (headlineNum >= headlines.length - 1) {
@@ -147,9 +136,10 @@ export default function Headlines (props) {
       )
     } else {
       return (
-        <div>
-          {renderHeadlineCard()}
-        </div>
+        <React.Fragment>
+          {dataLoading  ? renderHeadlineCard() : loadingAnimation()}
+
+        </React.Fragment>
         
       )
     }
@@ -174,7 +164,7 @@ export default function Headlines (props) {
 
   return (
     <div className="headlines">
-      <h1>
+      <h1 className="title">
         Top Headlines
       </h1>
 

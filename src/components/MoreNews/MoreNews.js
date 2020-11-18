@@ -26,7 +26,7 @@ export default function MoreNews () {
         </div>
         <hr className="more-item-divider" />
       </div>
-      
+
     )
   })
 

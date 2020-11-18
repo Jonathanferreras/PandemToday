@@ -259,3 +259,129 @@
          opacity:0;
     }
 }
+
+
+@media only screen and (max-width: 1200px) {
+  .main-card{
+    width: 375px;
+  }
+
+  .headline-pic{
+    width: 375px;
+    height: 300px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    opacity: .4;
+    z-index: 1;
+  }
+  
+  .headline-card{
+    background-color: white;
+    width: 375px;
+    height: 120px;
+    padding: 10px 10px 0 20px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  
+
+  .main-card{
+    width: 335px;
+  }
+  
+  .slide-control{
+    width: 20px;
+    height: 90px;
+    z-index: 3;
+    position: absolute;
+    padding-left: 315px;
+    padding-top: 10px;
+  }
+  
+  .slide-control-dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  .slide-control-dot-active{
+    background-color: #E84393;
+  }
+
+  .slide-control-dot-inactive{
+    background-color: black;
+  }
+
+  .overlay{
+    background-color: rgba(0,0,0,0.7);
+    height: 300px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    z-index: 2;
+  }
+  
+  .headline-pic{
+    width: 335px;
+    height: 300px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    opacity: .4;
+    z-index: 1;
+  }
+  
+  .headline-card{
+    background-color: white;
+    width: 335px;
+    height: 160px;
+    padding: 10px 10px 0 20px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+  
+  .headline-tag{
+    width: 10 0px;
+    background-color: #ffe7e7;
+    color: #e91e63;
+    text-align: center;
+    font-size: .8rem;
+    font-weight: bold;
+    border: 1px solid #e91e63;
+    border-radius: 25px;
+    margin: 2px 10px 10px 10px;
+  }
+  
+  .headline-news{
+    font-weight: bold;
+    padding-left: 10px;
+  }
+  
+  .social-stats{
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+
+  .social-stats-link{
+    color: #E84393;
+    font-weight: bold;
+    padding-left: 20px;
+  }
+}
+
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+
+@media only screen and (max-width: 480px) {
+
+}
