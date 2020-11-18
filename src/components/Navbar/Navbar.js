@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCode, faSearch } from '@fortawesome/free-solid-svg-icons'
 
 export default function Navbar () {
+  const [active_page, setActive_page] = useState(42);
   const [width, setWidth] = React.useState(0)
   React.useEffect(() => {
     setWidth(window.innerWidth)
@@ -18,7 +19,7 @@ export default function Navbar () {
     console.log(width)
     if (width <= 414) {
       return (
-        <div className="content">
+        <div className="navbar-content">
           <img className="menu-icon" src='/menu.png' />
           <h2 className="logo"><span style={{ color: '#E84393' }}>PANDEM</span>TODAY</h2>
           <div className="search-area">
@@ -28,7 +29,7 @@ export default function Navbar () {
       )
     } else {
       return (
-        <div className="navbar-container">
+        <div className="navbar-content">
           <h2 className="logo"><span style={{ color: '#E84393' }}>PANDEM</span>TODAY</h2>
           <div className="menu">
             <div className="links">

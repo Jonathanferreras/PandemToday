@@ -12,7 +12,7 @@ import { faEye, faShareSquare } from '@fortawesome/free-solid-svg-icons'
 export default function Tweets () {
   const tweets = [
     { id: 1, username: 'CNN', screename: 'TwitterAPI', profile_pic: '/mnews-cv19.png', test_img: 'https://pbs.twimg.com/profile_images/942858479592554497/BbazLO9L_normal.jpg', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere dolor id sapien laoreet vulputate.', date: '4:19 PM · Oct 10, 2018' },
-    { id: 2, username: 'Twitter API', screename: 'TwitterAPI', profile_pic: '/mnews-cv19.png', test_img: 'https://pbs.twimg.com/profile_images/942858479592554497/BbazLO9L_normal.jpg', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere dolor id sapien laoreet vulputate.', date: '4:19 PM · Oct 10, 2018' },
+    { id: 2, username: 'Twitter API', screename: 'TwitterAPI', profile_pic: '/mnews-cv19.png', test_img: 'https://pbs.twimg.com/profile_images/942858479592554497/BbazLO9L_normal.jpg', body: "The NFL says Sunday's game between the Pittsburgh Steelers and the Tennessee Titans has been postponed after the Ti…", date: '4:19 PM · Oct 10, 2018' },
     { id: 2, username: 'Twitter API', screename: 'TwitterAPI', profile_pic: '/mnews-cv19.png', test_img: 'https://pbs.twimg.com/profile_images/942858479592554497/BbazLO9L_normal.jpg', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere dolor id sapien laoreet vulputate.', date: '4:19 PM · Oct 10, 2018' }
 
   ]

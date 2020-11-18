@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import Card from '../Card/Card'
+import DropdownFilter from './DropdownFilter'
 import styles from './Stats.module.css'
 
 
@@ -18,11 +19,12 @@ export default function Stats () {
 
   return (
     <div className="stats">
-      <h1>
+      <h1 className="title"> 
         Stats
       </h1>
       <div className="filter">
-        <h4 className="stats-filter">Global</h4>
+        <DropdownFilter />
+        
         <h5 className="see-more">See More</h5>
       </div>
 
