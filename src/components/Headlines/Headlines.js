@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import your icons
 import { faEye, faShareSquare } from '@fortawesome/free-solid-svg-icons'
 
-import {getHeadlinesForLandingPage} from '../../services/news/client'
+import { getHeadlinesForLandingPage } from '../../services/news/client'
 
 export default function Headlines (props) {
   const [headlineNum, setheadlineNum] = useState(0)
