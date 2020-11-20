@@ -1,6 +1,8 @@
 .more-news{
     height: 434px;
     width: 390px;
+    flex: 20%
+
   }
   
   .heading{

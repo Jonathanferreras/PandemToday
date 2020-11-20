@@ -22,14 +22,14 @@ export default function Home () {
       </Head>
       <main className="flex-container">
         <div className="flex-content">
-          <div className="">
+          <div className="stat-area">
             <Stats />
           </div>
           <div className="main-area">
             <Headlines screenwidth={width} />
             <Tweets />
           </div>
-          <div className="">
+          <div className="morenews-area">
             <MoreNews />
           </div>
         </div>

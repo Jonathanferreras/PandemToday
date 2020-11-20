@@ -1,10 +1,13 @@
 .headlines{
     /* margin-left: 30px;
     margin-right: 30px; */
+    max-width: 675px;
+    width: 100%;
   }
   
   .main-card{
-    width: 675px;
+    max-width: 675px;
+    width: 100%;
   }
   
   .slide-control{
@@ -12,7 +15,7 @@
     height: 90px;
     z-index: 3;
     position: absolute;
-    padding-left: 655px;
+    /* padding-left: 655px; */
     padding-top: 10px;
   }
   
@@ -40,7 +43,8 @@
   }
   
   .headline-pic{
-    width: 675px;
+    max-width: 675px;
+    width: 100%;
     height: 300px;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
@@ -50,7 +54,7 @@
   
   .headline-card{
     background-color: white;
-    width: 675px;
+    /* width: 675px; */
     height: 120px;
     padding: 10px 10px 0 20px;
     border-bottom-left-radius: 7px;
@@ -162,7 +166,7 @@
 }
 
 
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
   .main-card{
     width: 375px;
   }
@@ -184,7 +188,7 @@
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
   }
-}
+} */
 
 
 @media only screen and (max-width: 768px) {
