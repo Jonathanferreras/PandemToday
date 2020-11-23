@@ -64,13 +64,13 @@ export default function Headlines (props) {
     }
   }
 
-  useEffect(() => {
-    const interval = setInterval(cycleHeadlines, 5000)
+  // useEffect(() => {
+  //   const interval = setInterval(cycleHeadlines, 5000)
 
-    return () => {
-      clearInterval(interval)
-    }
-  }, [headlineNum])
+  //   return () => {
+  //     clearInterval(interval)
+  //   }
+  // }, [headlineNum])
 
   const loadingAnimation = () => {
     return (

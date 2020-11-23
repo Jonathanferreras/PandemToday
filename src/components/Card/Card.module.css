@@ -2,14 +2,13 @@
     background-color: white;
     border-radius: 7px;
     height: 88px;
-    width: 190px;
+    width: 100%;
     margin-bottom: 30px;
-    z-index: -1;
-  }
+    }
   
   .card-title{
     font-size: .9rem;
-    padding: 13px;
+    padding: 0 10px;
     margin-bottom: 0;
     padding-bottom: 0;
   }

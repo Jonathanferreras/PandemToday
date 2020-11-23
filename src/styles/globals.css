@@ -38,19 +38,9 @@ h1{
 /* Flexbox for main content */
 .flex-container{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  width: 100%;
 }
 
-.flex-content{
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  width: 100%;
-  max-width: 1319px;
-  margin-top: 5px;
-}
 
 /* .main-area{
   width: 675px;
@@ -66,7 +56,7 @@ h1{
   border-right: 5px solid transparent;
   border-top: 5px solid   #ACACAC;
   margin-top: 2px;
-  margin-left: 10px;
+  margin-left: 5px;
   display: inline-block;
 }
 
@@ -236,42 +226,26 @@ h1{
 
 
 /* new flex code */
-.flex-container{
-  min-width: 0;
 
-}
-
-.flex-content{
-  min-width: 0;
-  min-height: 0;
-  overflow: hidden;
+.col {
+  padding: 0 10px;
 }
 
 .stat-area{
-  display: flex;
-  flex: 0 1 220px;
-  padding: 10px;
-  min-width: 0;
-  min-height: 0;
-  overflow: hidden;
+  flex-grow: 2;
+  margin-left: 42.5px;
 }
 
 .main-area{
-  flex: 0 1 675px;
+  flex-grow: 6;
   max-width: 675px;
-  padding: 10px;
-  min-width: 0;
-  min-height: 0;
   overflow: hidden;
 
 }
 
 .morenews-area{
-  flex: 0 1 424px;
-  padding: 10px;
-  min-width: 0;
-  min-height: 0;
-  overflow: hidden;
+  flex-grow: 4;
+  margin-right: 42.5px;
 
 }
 flex: 0 1 220px;
@@ -287,19 +261,6 @@ flex: 0 1 220px;
 
 
 
-/* @media only screen and (max-width: 1200px) {
-  .flex-content{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 1000px;
-    margin-top: 5px;
-  }
-
-  .main-area{
-    width: 375px;
-  }
-} */
 
 @media only screen and (max-width: 768px) {
   .flex-content{

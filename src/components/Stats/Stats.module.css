@@ -6,13 +6,14 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  
+  margin-bottom: 10px;
 }
 
 .stats-filter{
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 205px;
 }
 
 .global-txt{
@@ -25,6 +26,11 @@
   margin: 0;
   margin-left: auto;
   z-index: 0;
+}
+
+.stat-cards{
+  display: flex;
+  flex-direction: column;
 }
 
 .card-stats-area{
@@ -66,10 +72,51 @@
 .case-numbers{
   font-size: 1.4rem;
   margin-left: auto;
-  padding-right: 10px;
+  padding: 0 10px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1268px) {
+  .global-txt{
+    font-size: .8rem;
+  }
+  
+  .see-more{
+    font-size: .65rem;
+  }
+
+  .card{
+    height: 70px;
+  }
+
+  .card-title{
+    font-size: .8rem;
+  }
+
+  .case-numbers{
+    font-size: 1.1rem;
+    padding-left: 10px;
+  }
+
+  .green-arrow-down{
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    margin-top: 20px;
+  }
+
+  .green-arrow-up{
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #52D57F;
+    margin-top: 20px;
+  }
+
+  .red-arrow-up{
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #DC143C;
+    margin-top: 20px;
+  }
+
 
 }
 

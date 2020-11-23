@@ -39,7 +39,7 @@ export default function Tweets () {
       <div className="heading">
         <h1 className="title">Tweets</h1>
       </div>
-      <div className="tweets-group">
+      <div className="tweet-cards">
         {renderTweets}
       </div>
     </div>

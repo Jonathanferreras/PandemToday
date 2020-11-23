@@ -21,18 +21,16 @@ export default function Home () {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
       <main className="flex-container">
-        <div className="flex-content">
-          <div className="stat-area">
+          <div className="stat-area col">
             <Stats />
           </div>
-          <div className="main-area">
+          <div className="main-area col">
             <Headlines screenwidth={width} />
             <Tweets />
           </div>
-          <div className="morenews-area">
+          <div className="morenews-area col">
             <MoreNews />
           </div>
-        </div>
       </main>
     </Layout>
   )

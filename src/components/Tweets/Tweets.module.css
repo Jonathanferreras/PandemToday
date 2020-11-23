@@ -6,16 +6,19 @@
   margin-top: 0;
 }
 
-.tweets-group{
-  display: inline-flex;
+.tweet-cards{
+  display: flex;
+  flex-direction: row;
 }
 
 
 .tweet-card{
   background-color: white;
-  border-radius: 12px;
+  /* flex-grow: 1; */
+  max-width: 210px;
+  width: 100%;
   height: 80px;
-  width: 215px;
+  border-radius: 12px;
   margin: 0 15px 0 0;
   display: flex;
   overflow-y: hidden;
@@ -31,9 +34,6 @@
   padding: 10px 0px 0 10px;
 }
 
-.tweet{
-  float: right;
-}
 
 .tweet-user{
 
@@ -59,11 +59,46 @@
 }
 
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1268px) {
+  .tweet-card{
+    margin-right: 5px;
+    max-width: 200px;
+  }
 
+  .tweet-profile-pic{
+    width: 45px;
+    height: 45px;
+    padding-left: 3px;
+  }
+
+  .tweet-user{
+
+  }
+
+  .twitter-username {
+    font-size: .6rem;
+  }
+
+  .twitter-handle{
+    font-size: .6rem;
+  }
+
+  .tweet-body{
+    font-size: .5rem;
+  }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1050px) {
+  .twitter-username {
+    font-size: .52rem;
+  }
+
+  .twitter-handle{
+    font-size: .52rem;
+  }
+}
+
+@media only screen and (max-width: 982px) {
 
 }
 
