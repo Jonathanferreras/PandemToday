@@ -15,7 +15,7 @@
 .tweet-card{
   background-color: white;
   /* flex-grow: 1; */
-  max-width: 210px;
+  max-width: 21y0px;
   width: 100%;
   height: 80px;
   border-radius: 12px;
@@ -84,7 +84,7 @@
   }
 
   .tweet-body{
-    font-size: .5rem;
+    font-size: .52rem;
   }
 }
 
@@ -95,6 +95,10 @@
 
   .twitter-handle{
     font-size: .52rem;
+  }
+
+  .tweet-body{
+    font-size: .5rem;
   }
 }
 

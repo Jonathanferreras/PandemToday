@@ -91,9 +91,11 @@ export default function Headlines (props) {
     return (
       <div className="main-card box" key={data[headlineNum].id}>
         <Link href={data[headlineNum].url ? data[headlineNum].url : '/'}>
-          <a className=''>
+          <a className="">
             <div className="slide-control">
-              {renderDots}
+                <div className="slide-control-dots">
+                {renderDots}
+              </div>
             </div>
             <div className="overlay">
               <img className="headline-pic" src={data[headlineNum].urlToImage} />
@@ -102,11 +104,9 @@ export default function Headlines (props) {
               <div className="headline-tag"> {headlines[headlineNum].tag}</div>
               <div className="headline-news">
                 {data[headlineNum].title}
-
               </div>
               <div className="social-stats">
                 <b className="pink">Source:  </b> {data[headlineNum].author}
-
               </div>
             </div>
           </a></Link>
@@ -168,10 +168,6 @@ export default function Headlines (props) {
       <h1 className="title">
         Top Headlines
       </h1>
-
-      <div>
-
-      </div>
 
       {renderHeadline(headlineNum)}
 
