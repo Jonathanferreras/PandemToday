@@ -13,16 +13,29 @@ export default function Home () {
     setWidth(window.innerWidth)
   })
 
-  return (
-    <Layout>
-      <Head>
-        <title>PandemToday</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-      </Head>
-      <main className="flex-container">
+  const renderLayout = () => {
+    if (width <= 982) {
+      return (
+        <React.Fragment>
           <div className="stat-area col">
-            <Stats />
+            <Stats screenwidth={width} />
+          </div>
+          <div className="main-area col">
+            <Headlines screenwidth={width} />
+          </div>
+          <div className="morenews-area col">
+            <MoreNews />
+          </div>
+          <div className=" main-area col">
+            <Tweets screenwidth={width} />
+          </div>
+        </React.Fragment>
+      )
+    } else {
+      return (
+        <React.Fragment>
+          <div className="stat-area col">
+            <Stats screenwidth={width} />
           </div>
           <div className="main-area col">
             <Headlines screenwidth={width} />
@@ -31,6 +44,20 @@ export default function Home () {
           <div className="morenews-area col">
             <MoreNews />
           </div>
+        </React.Fragment>
+      )
+    }
+  }
+
+  return (
+    <Layout>
+      <Head>
+        <title>PandemToday</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+      </Head>
+      <main className="flex-container">
+        {renderLayout()}
       </main>
     </Layout>
   )

@@ -58,10 +58,17 @@ Attempt three times for data, and show error fetching data.
 
 
 Mobile View
-Stats bar
-        - small horizontal bar with stat #s
-Headlines
-More news
+Stats bar    *done
+        - small horizontal bar with stat #s   
+Headlines   * done
+More news    
         - one piece stories in one box
 Tweets 
         - looks stats with individual cards with margin top and bottom
+
+
+
+New tasks:
+Work on news page
+Work on resources page
+        - Add tips to page, static page

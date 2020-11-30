@@ -21,8 +21,6 @@ export default function Headlines (props) {
 
   const width = props.screenwidth
 
-  // console.log('headlines')
-  // console.log(width)
 
   const headlines = [
     { id: 0, title: 'Biden COVID-19 adviser suggests potential lockdown lasting over a month', tag: 'Coronavirus', author: 'Fox News', img: '/cv19.png', urlToImage: 'https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2020/11/0/0/Michael-Osterholm-GETTY.jpg?ve=1&tl=1', url: 'https://www.foxbusiness.com/economy/biden-covid-19-adviser-lockdown' },

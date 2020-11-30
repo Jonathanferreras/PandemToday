@@ -208,11 +208,26 @@
 }
 
 
-@media only screen and (max-width: 768px) {
-  
+@media only screen and (max-width: 982px) {
+  .main-area{
+    max-width: 100% !important;
+    width: 100%;
+    padding: 0 42.5px;
+    
+  }
+
+  .headlines{
+    max-width: 100% !important;
+    width: 100%;
+  }
+
+  .headline-tag{
+    width: 90px;
+  }
 
   .main-card{
-    width: 335px;
+    max-width: 100% !important;
+    width: 100%;
   }
   
   .slide-control{
@@ -220,7 +235,6 @@
     height: 90px;
     z-index: 3;
     position: absolute;
-    padding-left: 315px;
     padding-top: 10px;
   }
   
@@ -248,7 +262,8 @@
   }
   
   .headline-pic{
-    width: 335px;
+    max-width: 100% !important;
+    width: 100%;
     height: 300px;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
@@ -294,16 +309,3 @@
   }
 }
 
-
-@media only screen and (max-width: 1200px) {
-
-}
-
-@media only screen and (max-width: 768px) {
-
-}
-
-
-@media only screen and (max-width: 480px) {
-
-}

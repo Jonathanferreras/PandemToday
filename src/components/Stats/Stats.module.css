@@ -153,6 +153,56 @@
 }
 
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 982px) {
+  .stats{
+    margin: 0 32.5px !important;
+  }
+
+  .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .card h5{
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .stat{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .card .stat:nth-child(1){
+    margin-right: auto;
+  }
+
+  .card .stat:nth-child(3){
+    margin-left: auto;
+  }
+
+  .title{
+    margin-bottom: 10px !important;
+  }
+
+  .case-numbers{
+    padding: 0;
+  }
+
+  .case-numbers{
+    color: #52D57F;
+  }
+
+  .recovered-numbers{
+    color: #52D57F;
+  }
+
+  .death-numbers{
+    color: #DC143C;
+  }
+  
 
 }
