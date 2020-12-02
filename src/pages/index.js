@@ -13,6 +13,42 @@ export default function Home () {
     setWidth(window.innerWidth)
   })
 
+  const renderLayout = () => {
+    if (width <= 982) {
+      return (
+        <React.Fragment>
+          <div className="stat-area col">
+            <Stats screenwidth={width} />
+          </div>
+          <div className="main-area col">
+            <Headlines screenwidth={width} />
+          </div>
+          <div className="morenews-area col">
+            <MoreNews />
+          </div>
+          <div className=" main-area col">
+            <Tweets screenwidth={width} />
+          </div>
+        </React.Fragment>
+      )
+    } else {
+      return (
+        <React.Fragment>
+          <div className="stat-area col">
+            <Stats screenwidth={width} />
+          </div>
+          <div className="main-area col">
+            <Headlines screenwidth={width} />
+            <Tweets />
+          </div>
+          <div className="morenews-area col">
+            <MoreNews />
+          </div>
+        </React.Fragment>
+      )
+    }
+  }
+
   return (
     <Layout>
       <Head>
@@ -21,18 +57,7 @@ export default function Home () {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
       <main className="flex-container">
-        <div className="flex-content">
-          <div className="">
-            <Stats />
-          </div>
-          <div className="main-area">
-            <Headlines screenwidth={width} />
-            <Tweets />
-          </div>
-          <div className="">
-            <MoreNews />
-          </div>
-        </div>
+        {renderLayout()}
       </main>
     </Layout>
   )

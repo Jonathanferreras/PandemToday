@@ -6,16 +6,19 @@
   margin-top: 0;
 }
 
-.tweets-group{
-  display: inline-flex;
+.tweet-cards{
+  display: flex;
+  flex-direction: row;
 }
 
 
 .tweet-card{
   background-color: white;
-  border-radius: 12px;
+  /* flex-grow: 1; */
+  max-width: 21y0px;
+  width: 100%;
   height: 80px;
-  width: 215px;
+  border-radius: 12px;
   margin: 0 15px 0 0;
   display: flex;
   overflow-y: hidden;
@@ -31,9 +34,6 @@
   padding: 10px 0px 0 10px;
 }
 
-.tweet{
-  float: right;
-}
 
 .tweet-user{
 
@@ -59,12 +59,100 @@
 }
 
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1268px) {
+  .tweet-card{
+    margin-right: 5px;
+    max-width: 200px;
+  }
 
+  .tweet-profile-pic{
+    width: 45px;
+    height: 45px;
+    padding-left: 3px;
+  }
+
+  .tweet-user{
+
+  }
+
+  .twitter-username {
+    font-size: .6rem;
+  }
+
+  .twitter-handle{
+    font-size: .6rem;
+  }
+
+  .tweet-body{
+    font-size: .52rem;
+  }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1050px) {
+  .twitter-username {
+    font-size: .52rem;
+  }
 
+  .twitter-handle{
+    font-size: .52rem;
+  }
+
+  .tweet-body{
+    font-size: .5rem;
+  }
+}
+
+@media only screen and (max-width: 982px) {
+  .tweet-cards{
+    flex-direction: column;
+  }
+
+  .tweet-card{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    flex-direction: column;
+    
+  }
+
+  .tweet-user-area{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .tweet-profile-pic{
+    width: 65px;
+    height: 65px;
+    border-radius: 30px;
+  }
+
+  .tweet-user{
+    width: 100%;
+    max-width: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .twitter-username{
+    font-size: .9rem;
+  }
+
+  .twitter-handle{
+    font-size: .9rem;
+  }
+
+  .tweet-body{
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+  }
 }
 
 

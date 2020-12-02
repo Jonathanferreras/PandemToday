@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/react-in-jsx-scope */
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import styles from './MoreNews.module.css'
@@ -9,7 +10,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import your icons
 import { faEye, faShareSquare } from '@fortawesome/free-solid-svg-icons'
 
+import { getArticlesForLandingPage } from '../../services/news/client'
+
 export default function MoreNews () {
+  const [data, setData] = useState([])
+  const [dataLoading, setDataLoading] = useState(false)
+
   const news_articles = [
     { title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', news_img: '/mnews-cv19.png' },
     { title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', news_img: '/mnews-cv19.png' },
@@ -17,10 +23,35 @@ export default function MoreNews () {
     { title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', news_img: '/mnews-cv19.png' }
   ]
 
-  const renderMoreNews = news_articles.map((article, article_num) => {
+  useEffect(() => {
+    getArticlesForLandingPage()
+      .then(d => {
+        setData(d.articles)
+        setDataLoading(true)
+        console.log(data)
+      })
+  }, [])
+
+  const loadingAnimation = () => {
+    return (
+      <div className="loading bar">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    )
+  }
+
+  const renderMoreNews = data.map((article, article_num) => {
+    console.log(data)
     return (
       <div className="more-news-item" key={article_num}>
-        <img className="more-news-item-img" src={`${article.news_img}`}/>
+        <img className="more-news-item-img" src={article.urlToImage} />
         <div className="more-news-item-story">
           <p >{article.title}</p>
         </div>
@@ -38,7 +69,7 @@ export default function MoreNews () {
       </div>
 
       <div className="more-news-card">
-        {renderMoreNews}
+        {dataLoading ? renderMoreNews : loadingAnimation()}
       </div>
     </div>
   )

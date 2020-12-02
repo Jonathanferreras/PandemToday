@@ -11,6 +11,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import your icons
 import { faEye, faShareSquare } from '@fortawesome/free-solid-svg-icons'
 
+import { getHeadlinesForLandingPage } from '../../services/news/client'
+
 export default function Headlines (props) {
   const [headlineNum, setheadlineNum] = useState(0)
   const [activeDot, setActiveDot] = useState(0)
@@ -19,8 +21,6 @@ export default function Headlines (props) {
 
   const width = props.screenwidth
 
-  // console.log('headlines')
-  // console.log(width)
 
   const headlines = [
     { id: 0, title: 'Biden COVID-19 adviser suggests potential lockdown lasting over a month', tag: 'Coronavirus', author: 'Fox News', img: '/cv19.png', urlToImage: 'https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2020/11/0/0/Michael-Osterholm-GETTY.jpg?ve=1&tl=1', url: 'https://www.foxbusiness.com/economy/biden-covid-19-adviser-lockdown' },
@@ -44,7 +44,12 @@ export default function Headlines (props) {
   }
 
   useEffect(() => {
-    getHeadlineArticles()
+    getHeadlinesForLandingPage()
+      .then(data => {
+        setData(data.articles)
+        setDataLoading(true)
+      })
+
   }, [])
 
   const cycleHeadlines = () => {
@@ -82,24 +87,24 @@ export default function Headlines (props) {
 
   const renderHeadlineCard = () => {
     return (
-      <div className="main-card box" key={headlines[headlineNum].id}>
-        <Link href={headlines[headlineNum].url ? headlines[headlineNum].url : '/'}>
-          <a className=''>
+      <div className="main-card box" key={data[headlineNum].id}>
+        <Link href={data[headlineNum].url ? data[headlineNum].url : '/'}>
+          <a className="">
             <div className="slide-control">
-              {renderDots}
+                <div className="slide-control-dots">
+                {renderDots}
+              </div>
             </div>
             <div className="overlay">
-              <img className="headline-pic" src={data ? data[headlineNum].urlToImage : headlines[headlineNum].urlToImage} />
+              <img className="headline-pic" src={data[headlineNum].urlToImage} />
             </div>
             <div className="headline-card">
               <div className="headline-tag"> {headlines[headlineNum].tag}</div>
               <div className="headline-news">
-                {headlines[headlineNum].title}
-
+                {data[headlineNum].title}
               </div>
               <div className="social-stats">
-                <b className="pink">Source:  </b> {headlines[headlineNum].author}
-
+                <b className="pink">Source:  </b> {data[headlineNum].author}
               </div>
             </div>
           </a></Link>
@@ -161,10 +166,6 @@ export default function Headlines (props) {
       <h1 className="title">
         Top Headlines
       </h1>
-
-      <div>
-
-      </div>
 
       {renderHeadline(headlineNum)}
 

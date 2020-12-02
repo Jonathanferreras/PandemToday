@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    .app {
+      background-color: #F2F2F2;
+      height: 100vh;
+    }
+    .navbar {
+      background-color: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 50px;
+    }
+    .navbar-desktop {
+      width: 100%;
+      display: flex;
+    }
+    .navbar-mobile {
+      display: none;
+    }
+    .navbar-mobile-menu {
+      margin-left: auto;
+    }
+    .navbar-nav {
+      margin-left: auto;
+      display: flex;
+    }
+    .navbar-nav li {
+      margin-left: 50px;
+      list-style: none;
+    }
+    .content {
+      width: 100%;
+      display: flex;
+    }
+    .col {
+      padding: 0 10px;
+    }
+    .left-col {
+      flex-grow: 2;
+      margin-left: 42.5px;
+    }
+    .mid-col {
+      flex-grow: 6;
+    }
+    .right-col {
+      flex-grow: 4;
+      margin-right: 42.5px;
+    }
+    .card {
+      background-color: #FFF;
+      box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    }
+    .top-headlines {
+      margin-bottom: 20px;
+    }
+    .card-with-image {
+      background-color: #FFF;
+      box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    }
+    .stats-cards {
+      display: flex;
+      flex-direction: column;
+    }
+    .stats-cards .card {
+      margin-bottom: 10px;
+    }
+    .tweets .header, .more-news .header {
+        display: flex;
+    }
+    .tweets .see-more-link, .more-news .see-more-link {
+      margin-left: auto;
+    }
+    .tweets-cards {
+      display: flex;
+    }
+    .tweets-cards .card {
+      flex-grow: 1;
+    }
+    .tweets-cards .card:nth-child(1) {
+      margin-right: 10px;
+    }
+    .tweets-cards .card:nth-child(3) {
+      margin-left: 10px;
+    }
+    @media only screen and (max-width: 960px) {
+      .navbar-desktop {
+        display: none;
+      }
+      .navbar-mobile {
+        display: contents;
+      }
+      .navbar {
+      padding: 20px 25px;
+      }
+      .col {
+        padding: 0;
+        margin-bottom: 20px;
+      }
+      .left-col, .mid-col, .right-col {
+        margin-left: 25px;
+        margin-right: 25px;
+      }
+      .content, .tweets-cards {
+        flex-direction: column;
+      }
+      .stats-cards .card {
+        flex-grow: 1;    
+      }
+      .stats-cards .card:nth-child(1) {
+        margin-right: 10px;
+      }
+      .stats-cards .card:nth-child(3) {
+        margin-left: 10px;
+      }
+      .tweets-cards .card:nth-child(1) {
+        margin-right: 0px;
+      }
+      .tweets-cards .card:nth-child(3) {
+        margin-left: 0px;
+      }
+      .stats-cards {
+        flex-direction: row;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="navbar">
+      <div class="navbar-desktop">
+        <div class="navbar-logo">
+          PANDEMTODAY
+        </div>
+        <ul class="navbar-nav">
+          <li>
+            <a href="">Home</a>
+          </li>
+          <li>
+            <a href="">News</a>
+          </li>
+          <li>
+            <a href="">Statistics</a>
+          </li>
+          <li>
+            <a href="">Resources</a>
+          </li>
+          <li>
+            <div class="searchbar">
+              <input class="searchbar-input" type="text">
+              <div class="searchbar-icon"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-mobile">
+        <div class="navbar-mobile-logo">PT</div>
+        <div class="navbar-mobile-menu">Menu</div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="left-col col">
+        <div class="stats">
+          <div class="header">
+            <div class="title">Stats</div>
+          </div>
+          <div class="stats-options">
+            <option value=""></option>
+            <a class="see-more-link">See More</a>
+          </div>
+          <div class="stats-cards">
+            <div class="card">Card1</div>
+            <div class="card">Card2</div>
+            <div class="card">Card3</div>
+          </div>
+        </div>
+      </div>
+      <div class="mid-col col">
+        <div class="top-headlines">
+          <div class="header">
+            <div class="title">Top Headlines</div>
+          </div>
+          <div class="card-with-image">Card with Image</div>
+        </div>
+        <div class="tweets">
+          <div class="header">
+            <div class="title">Tweets</div>
+            <a class="see-more-link">See More</a>
+          </div>
+          <div class="tweets-cards">
+            <div class="card">Card1</div>
+            <div class="card">Card2</div>
+            <div class="card">Card3</div>
+          </div>
+        </div>
+      </div>
+      <div class="right-col col">
+        <div class="more-news">
+          <div class="header">
+            <div class="title">More News</div>
+            <a class="see-more-link">See More</a>
+          </div>
+          <div class="card">
+            <div class="more-news-article">Article1</div>
+            <div class="more-news-article">Article2</div>
+            <div class="more-news-article">Article3</div>
+            <div class="more-news-article">Article4</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
