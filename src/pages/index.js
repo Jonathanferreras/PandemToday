@@ -14,26 +14,9 @@ export default function Home () {
   })
 
   const renderLayout = () => {
-    if (width <= 982) {
-      return (
-        <React.Fragment>
-          <div className="stat-area col">
-            <Stats screenwidth={width} />
-          </div>
-          <div className="main-area col">
-            <Headlines screenwidth={width} />
-          </div>
-          <div className="morenews-area col">
-            <MoreNews />
-          </div>
-          <div className=" main-area col">
-            <Tweets screenwidth={width} />
-          </div>
-        </React.Fragment>
-      )
-    } else {
-      return (
-        <React.Fragment>
+    return(
+      <React.Fragment>
+        <div className="layout-desktop">
           <div className="stat-area col">
             <Stats screenwidth={width} />
           </div>
@@ -44,9 +27,26 @@ export default function Home () {
           <div className="morenews-area col">
             <MoreNews />
           </div>
-        </React.Fragment>
-      )
-    }
+        </div>
+
+
+        <div className="layout-mobile">
+          <div className="stat-area col">
+            <Stats screenwidth={width} />
+          </div>
+          <div className="main-area col">
+            <Headlines screenwidth={width} />
+          </div>
+          <div className="morenews-area col">
+            <MoreNews />
+          </div>
+          <div className="main-area col">
+            <Tweets screenwidth={width} />
+          </div>
+        </div>
+
+      </React.Fragment>
+    )
   }
 
   return (

@@ -39,6 +39,7 @@ h1{
 .flex-container{
   display: flex;
   width: 100%;
+  padding-top: 20px;
 }
 
 .col {
@@ -203,6 +204,8 @@ h1{
 }
 
 
+
+
 .side {
   flex: 20%;
   background-color: #ACACAC;
@@ -222,6 +225,30 @@ h1{
   height: 300px;
 }
 
+.layout-desktop{
+  display: contents;
+}
+
+.layout-mobile{
+  display: none;
+}
+
+.stat-area{
+  flex-grow: 1;
+  margin-left: 62.5px;
+}
+
+.main-area{
+  flex-grow: 2;
+  max-width: 700px;
+  overflow: hidden;
+}
+
+.morenews-area{
+  /* flex-grow: 3; */
+  margin-right: 62.5px;
+}
+
 @media screen and (max-width: 982px) {
   .flex-container{
     display: flex;
@@ -229,6 +256,14 @@ h1{
     /* margin-left: 42.5px !important;
     margin-right: 120px !important; */
     padding-top: 20px;
+  }
+
+  .layout-desktop{
+    display: none;
+  }
+  
+  .layout-mobile{
+    display: contents;
   }
 
   .title{
@@ -250,21 +285,6 @@ h1{
 
 
 
-.stat-area{
-  flex-grow: 2;
-  margin-left: 42.5px;
-}
 
-.main-area{
-  flex-grow: 6;
-  max-width: 675px;
-  overflow: hidden;
-}
 
-.morenews-area{
-  flex-grow: 4;
-  margin-right: 42.5px;
 
-}
-/* flex: 0 1 220px;
-424px */

@@ -55,7 +55,8 @@
   color: #909090;
   font-size: .6rem;
   margin: 0;
-  padding: 0 5px;
+  padding-left: 5px;
+  padding-right: 2px;
 }
 
 
@@ -88,7 +89,7 @@
   }
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1175px) {
   .twitter-username {
     font-size: .52rem;
   }
@@ -99,6 +100,20 @@
 
   .tweet-body{
     font-size: .5rem;
+  }
+}
+
+@media only screen and (max-width: 1075px) {
+  .twitter-username {
+    font-size: .42rem;
+  }
+
+  .twitter-handle{
+    font-size: .42rem;
+  }
+
+  .tweet-body{
+    font-size: .42rem;
   }
 }
 

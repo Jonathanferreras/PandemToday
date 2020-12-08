@@ -2,6 +2,14 @@
   
 }
 
+.stats-desktop{
+  display: contents;
+}
+
+.stats-mobile{
+  display: none;
+}
+
 .filter{
   display: flex;
   justify-content: flex-start;
@@ -156,6 +164,14 @@
 @media only screen and (max-width: 982px) {
   .stats{
     margin: 0 32.5px !important;
+  }
+
+  .stats-desktop{
+    display: none;
+  }
+
+  .stats-mobile{
+    display: contents;
   }
 
   .card{

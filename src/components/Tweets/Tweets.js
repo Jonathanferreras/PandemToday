@@ -18,7 +18,6 @@ export default function Tweets (props) {
 
   const width = props.screenwidth
 
-
   const renderTweets = tweets.map((tweet, tweet_id) => {
     if (width <= 982) {
       return (
@@ -31,14 +30,14 @@ export default function Tweets (props) {
             </div>
           </div>
           <div className="tweet-body">
-              <p>
-                {tweet.body}
-              </p>
+            <p>
+              {tweet.body}
+            </p>
           </div>
         </TweetCard>
       )
-    } else{
-      return(
+    } else {
+      return (
         <TweetCard className="tweet-area" key={tweet_id}>
           <img className="tweet-profile-pic" src={`${tweet.profile_pic}`} />
           <div className="tweet">
