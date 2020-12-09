@@ -39,7 +39,7 @@ h1{
 .flex-container{
   display: flex;
   width: 100%;
-  padding-top: 20px;
+  padding: 20px 0;
 }
 
 .col {
@@ -234,19 +234,23 @@ h1{
 }
 
 .stat-area{
-  flex-grow: 1;
-  margin-left: 62.5px;
+  flex-grow: 2;
+  margin-left: 42.5px;
+  max-width: 360px;
+  min-width: 180px;
 }
 
 .main-area{
-  flex-grow: 2;
-  max-width: 700px;
+  flex-grow: 6;
+  max-width: 1326px;
+  width: 700px;
   overflow: hidden;
 }
 
 .morenews-area{
-  /* flex-grow: 3; */
-  margin-right: 62.5px;
+  flex-grow: 3;
+  width: 420px;
+  margin-right: 42.5px;
 }
 
 @media screen and (max-width: 982px) {
@@ -271,10 +275,12 @@ h1{
   }
 
   .stat-area{
+    max-width: 100%;
     margin: 0 !important;
   }
 
   .morenews-area{
+    min-width: 100%;
     margin-right: 0 !important;
     padding: 0 42.5px;
   }

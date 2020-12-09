@@ -62,8 +62,9 @@
 
 @media only screen and (max-width: 1268px) {
   .tweet-card{
-    margin-right: 5px;
+    margin-right: 8px;
     max-width: 200px;
+    height: 78px;
   }
 
   .tweet-profile-pic{
@@ -85,17 +86,17 @@
   }
 
   .tweet-body{
-    font-size: .52rem;
+    font-size: .53rem;
   }
 }
 
 @media only screen and (max-width: 1175px) {
   .twitter-username {
-    font-size: .52rem;
+    font-size: .5rem;
   }
 
   .twitter-handle{
-    font-size: .52rem;
+    font-size: .5rem;
   }
 
   .tweet-body{
@@ -113,7 +114,7 @@
   }
 
   .tweet-body{
-    font-size: .42rem;
+    font-size: .44rem;
   }
 }
 

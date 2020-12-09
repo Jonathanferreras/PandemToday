@@ -81,6 +81,7 @@
   font-size: 1.4rem;
   margin-left: auto;
   padding: 0 10px;
+  padding-left: 30px;
 }
 
 @media only screen and (max-width: 1268px) {

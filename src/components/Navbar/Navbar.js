@@ -17,19 +17,9 @@ export default function Navbar () {
 
   const renderNavBar = () => {
     console.log(width)
-    if (width <= 414) {
-      return (
-        <div className="navbar-content">
-          <img className="menu-icon" src='/menu.png' />
-          <h2 className="logo"><span style={{ color: '#E84393' }}>PANDEM</span>TODAY</h2>
-          <div className="search-area">
-            <FontAwesomeIcon icon={faSearch} className="sicon" />
-          </div>
-        </div>
-      )
-    } else {
-      return (
-        <div className="navbar-content">
+    return(
+      <React.Fragment>
+        <div className="navbar-content nav-desktop">
           <h2 className="logo"><span style={{ color: '#E84393' }}>PANDEM</span>TODAY</h2>
           <div className="menu">
             <div className="links">
@@ -44,8 +34,18 @@ export default function Navbar () {
             </div>
           </div>
         </div>
-      )
-    }
+
+        <div className="navbar-content nav-mobile">
+          <div className="menu">
+            <img className="menu-icon" src='/menu.png' />
+            <h2 className="logo"><span style={{ color: '#E84393' }}>PANDEM</span>TODAY</h2>
+          </div>
+          <div className="search-area">
+            <FontAwesomeIcon icon={faSearch} className="sicon" />
+          </div>
+        </div>
+      </React.Fragment>
+    )
   }
 
   return (
