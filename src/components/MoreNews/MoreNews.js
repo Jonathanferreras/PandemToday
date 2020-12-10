@@ -23,14 +23,14 @@ export default function MoreNews () {
     { title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', news_img: '/mnews-cv19.png' }
   ]
 
-  useEffect(() => {
-    getArticlesForLandingPage()
-      .then(d => {
-        setData(d.articles)
-        setDataLoading(true)
-        console.log(data)
-      })
-  }, [])
+  // useEffect(() => {
+  //   getArticlesForLandingPage()
+  //     .then(d => {
+  //       setData(d.articles)
+  //       setDataLoading(true)
+  //       console.log(data)
+  //     })
+  // }, [])
 
   const loadingAnimation = () => {
     return (
@@ -49,16 +49,16 @@ export default function MoreNews () {
 
   const renderMoreNews = data.map((article, article_num) => {
     console.log(data)
-    return (
-      <div className="more-news-item" key={article_num}>
-        <img className="more-news-item-img" src={article.urlToImage} />
-        <div className="more-news-item-story">
-          <p >{article.title}</p>
-        </div>
-        <hr className="more-item-divider" />
-      </div>
+    // return (
+    //   <div className="more-news-item" key={article_num}>
+    //     <img className="more-news-item-img" src={article.urlToImage} />
+    //     <div className="more-news-item-story">
+    //       <p >{article.title}</p>
+    //     </div>
+    //     <hr className="more-item-divider" />
+    //   </div>
 
-    )
+    // )
   })
 
   return (
