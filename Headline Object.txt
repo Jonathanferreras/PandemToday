@@ -1,0 +1,33 @@
+Headline Object
+{
+  "source": {
+    "id": "cbs-news",
+    "name": "CBS News"
+  },
+  "author": "Anna Noryskiewicz",
+  "title": "Hundreds arrested, police use water cannons to quell \"aggressive\" protests against Germany's COVID rules",
+  "description": "Police used water cannons to break up the demonstrations after warnings to participants who refused to wear masks or socially distance as required by law.",
+  "url": "https://www.cbsnews.com/news/germany-coronavirus-anti-covid-protest-police-use-water-cannon-arrests-berlin/",
+  "urlToImage": "https://cbsnews3.cbsistatic.com/hub/i/r/2020/11/18/f04a76fd-bfe1-4776-a484-1a7358be2423/thumbnail/1200x630/6baced1ab6880c6598a6cb2b79c05d6c/germany-covid-protest.jpg",
+  "publishedAt": "2020-11-18T17:15:08+00:00",
+  "content": "Berlin — Demonstrations by opponents of the German government's coronavirus policy escalated on Wednesday with police using water cannons to break up the protests and making at least 200 arrests, acc… [+2771 chars]"
+}
+
+More News Article Object
+{
+  "source": {
+    "id": "bbc-news",
+    "name": "BBC News"
+  },
+  "author": null,
+  "title": "Covid: Clive Myrie visits the Navajo Nation",
+  "description": "Clive Myrie has visited the Navajo Nation in Arizona where the death rate is the highest in the US.",
+  "url": "https://www.bbc.co.uk/news/av/world-us-canada-54745441",
+  "urlToImage": "https://ichef.bbci.co.uk/images/ic/400xn/p08wxpqs.jpg",
+  "publishedAt": "2020-10-30T15:18:27Z",
+  "content": "The American election is just days away and many see November 3 as a referendum on Donald Trumps handling of the pandemic.\r\nMillions have requested postal votes because of the high rate of deaths fro… [+224 chars]"
+}
+
+{data ? data.urlToImage : news_articles[0].news_img}
+
+{`${data.urlToImage}`}

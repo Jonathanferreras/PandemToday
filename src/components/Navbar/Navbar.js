@@ -6,30 +6,26 @@ import styles from './Navbar.module.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import your icons
-import { faCode, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faCode, faSearch, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 export default function Navbar () {
-  const [active_page, setActive_page] = useState(42);
-  const [width, setWidth] = React.useState(0)
+  const [active_page, setActive_page] = useState(42)
+  const [width, setWidth] = useState(0)
+  const [menuOpened, setMenuOpened] = useState(false)
+
   React.useEffect(() => {
     setWidth(window.innerWidth)
   })
 
+  const openMenu = () => {
+    setMenuOpened(!menuOpened)
+  }
+
   const renderNavBar = () => {
     console.log(width)
-    if (width <= 414) {
-      return (
-        <div className="navbar-content">
-          <img className="menu-icon" src='/menu.png' />
-          <h2 className="logo"><span style={{ color: '#E84393' }}>PANDEM</span>TODAY</h2>
-          <div className="search-area">
-            <FontAwesomeIcon icon={faSearch} className="sicon" />
-          </div>
-        </div>
-      )
-    } else {
-      return (
-        <div className="navbar-content">
+    return (
+      <React.Fragment>
+        <div className="navbar-content nav-desktop">
           <h2 className="logo"><span style={{ color: '#E84393' }}>PANDEM</span>TODAY</h2>
           <div className="menu">
             <div className="links">
@@ -44,8 +40,28 @@ export default function Navbar () {
             </div>
           </div>
         </div>
-      )
-    }
+
+        <div className="navbar-content nav-mobile">
+          <div className="menu">
+            <img className="menu-icon" src='/menu.png' onClick={openMenu} />
+            <nav className={menuOpened ? 'menu-area menu-area-open' : 'menu-area'}>
+              <ul>
+                <a onClick={openMenu}><FontAwesomeIcon icon={faTimes} className="sicon" /></a>
+                <li>Home</li>
+                <li>News</li>
+                <li>Statistics</li>
+                <li>Resources</li>
+              </ul>
+            </nav>
+            <h2 className="logo"><span style={{ color: '#E84393' }}>PANDEM</span>TODAY</h2>
+          </div>
+
+          <div className="search-area">
+            <FontAwesomeIcon icon={faSearch} className="sicon" />
+          </div>
+        </div>
+      </React.Fragment>
+    )
   }
 
   return (

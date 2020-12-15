@@ -2,6 +2,14 @@
   
 }
 
+.stats-desktop{
+  display: contents;
+}
+
+.stats-mobile{
+  display: none;
+}
+
 .filter{
   display: flex;
   justify-content: flex-start;
@@ -73,6 +81,7 @@
   font-size: 1.4rem;
   margin-left: auto;
   padding: 0 10px;
+  padding-left: 30px;
 }
 
 @media only screen and (max-width: 1268px) {
@@ -156,6 +165,14 @@
 @media only screen and (max-width: 982px) {
   .stats{
     margin: 0 32.5px !important;
+  }
+
+  .stats-desktop{
+    display: none;
+  }
+
+  .stats-mobile{
+    display: contents;
   }
 
   .card{

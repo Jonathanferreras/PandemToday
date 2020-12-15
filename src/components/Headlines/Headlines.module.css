@@ -1,12 +1,9 @@
 .headlines{
-    /* margin-left: 30px;
-    margin-right: 30px; */
-    max-width: 675px;
+    /* max-width: 675px; */
     width: 100%;
   }
   
   .main-card{
-    max-width: 675px;
     width: 100%;
   }
 
@@ -49,7 +46,6 @@
   }
   
   .headline-pic{
-    max-width: 675px;
     width: 100%;
     height: 300px;
     border-top-left-radius: 7px;
@@ -60,7 +56,6 @@
   
   .headline-card{
     background-color: white;
-    /* width: 675px; */
     height: 120px;
     padding: 10px 10px 0 20px;
     border-bottom-left-radius: 7px;
@@ -274,6 +269,7 @@
   .headline-card{
     background-color: white;
     width: 335px;
+    max-width: 100%;
     height: 160px;
     padding: 10px 10px 0 20px;
     border-bottom-left-radius: 7px;

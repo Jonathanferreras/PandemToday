@@ -61,9 +61,9 @@ Mobile View
 Stats bar    *done
         - small horizontal bar with stat #s   
 Headlines   * done
-More news    
+More news    * done
         - one piece stories in one box
-Tweets 
+Tweets       * done
         - looks stats with individual cards with margin top and bottom
 
 

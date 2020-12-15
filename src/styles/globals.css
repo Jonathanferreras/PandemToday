@@ -39,6 +39,7 @@ h1{
 .flex-container{
   display: flex;
   width: 100%;
+  padding: 20px 0;
 }
 
 .col {
@@ -203,6 +204,8 @@ h1{
 }
 
 
+
+
 .side {
   flex: 20%;
   background-color: #ACACAC;
@@ -222,6 +225,34 @@ h1{
   height: 300px;
 }
 
+.layout-desktop{
+  display: contents;
+}
+
+.layout-mobile{
+  display: none;
+}
+
+.stat-area{
+  flex-grow: 2;
+  margin-left: 42.5px;
+  max-width: 360px;
+  min-width: 180px;
+}
+
+.main-area{
+  flex-grow: 6;
+  max-width: 1326px;
+  width: 700px;
+  overflow: hidden;
+}
+
+.morenews-area{
+  flex-grow: 3;
+  width: 420px;
+  margin-right: 42.5px;
+}
+
 @media screen and (max-width: 982px) {
   .flex-container{
     display: flex;
@@ -231,16 +262,26 @@ h1{
     padding-top: 20px;
   }
 
+  .layout-desktop{
+    display: none;
+  }
+  
+  .layout-mobile{
+    display: contents;
+  }
+
   .title{
     display: none;
   }
 
   .stat-area{
+    max-width: 100%;
     margin: 0 !important;
   }
 
   .morenews-area{
-    margin-right: 0 !important;
+    min-width: 100%;
+    width: 100%;
     padding: 0 42.5px;
   }
 }
@@ -250,21 +291,6 @@ h1{
 
 
 
-.stat-area{
-  flex-grow: 2;
-  margin-left: 42.5px;
-}
 
-.main-area{
-  flex-grow: 6;
-  max-width: 675px;
-  overflow: hidden;
-}
 
-.morenews-area{
-  flex-grow: 4;
-  margin-right: 42.5px;
 
-}
-/* flex: 0 1 220px;
-424px */
