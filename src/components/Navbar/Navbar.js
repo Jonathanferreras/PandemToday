@@ -30,7 +30,7 @@ export default function Navbar () {
           <div className="menu">
             <div className="links">
               <Link href="/"><a className="menu-item">Home</a></Link>
-              <Link className="menu-item" href="/"><a>News</a></Link>
+              <Link className="menu-item" href="/news"><a>News</a></Link>
               <Link className="menu-item" href="/"><a>Statistics</a></Link>
               <Link className="menu-item" href="/"><a>Resources</a></Link>
             </div>
@@ -47,10 +47,10 @@ export default function Navbar () {
             <nav className={menuOpened ? 'menu-area menu-area-open' : 'menu-area'}>
               <ul>
                 <a onClick={openMenu}><FontAwesomeIcon icon={faTimes} className="sicon" /></a>
-                <li>Home</li>
-                <li>News</li>
-                <li>Statistics</li>
-                <li>Resources</li>
+                <Link className="menu-item" href="/">Home</Link>
+                <Link className="menu-item" href="/">News</Link>
+                <Link className="menu-item" href="/">Statistics</Link>
+                <Link className="menu-item" href="/">Resources</Link>
               </ul>
             </nav>
             <h2 className="logo"><span style={{ color: '#E84393' }}>PANDEM</span>TODAY</h2>
