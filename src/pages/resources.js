@@ -51,12 +51,12 @@ export default function News (props) {
 
   const renderNews = data.map((article, article_num) => {
     return (
-      <Card type="news" className="news-item" key={article_num}>
+      <Card className="news-item" key={article_num}>
         <Link href={article.url}>
           <a>
             <img className="news-item-img" src={article.urlToImage} />
             <div className="news-item-story">
-              <p>{article.title}</p>
+              <p >{article.title}</p>
             </div>
           </a>
         </Link>
@@ -66,8 +66,8 @@ export default function News (props) {
 
   return (
     <Layout>
-      <div className="news-card-area">
-        {dataLoading ? renderNews : loadingAnimation()}
+      <div className="resources-area">
+        <h1>Get to Know your Resources</h1>
       </div>
     </Layout>
   )
