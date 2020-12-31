@@ -5,28 +5,19 @@
     align-items: center;
     margin-top: 30px;
 }
-.card{
-    background-color: white;
-    border-radius: 7px;
-    height: 120px !important;
-    width: 80% !important;
-    margin-bottom: 30px;
-}
-  
-.card-title{
-    font-size: .9rem;
-    padding: 0 10px;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.card{
+.news-card{
     display: flex;
     align-items: center;
+    background-color: white;
+    height: 120px !important;
+    width: 80% !important;
+    border-radius: 7px;
+    margin-bottom: 30px;
     padding: 0 20px;
+
 }
 
-.card a{
+.news-card a{
     display: flex;
     align-items: center;
     width: 100%;

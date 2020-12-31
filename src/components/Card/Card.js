@@ -11,7 +11,15 @@ export default function Card (props) {
         {props.children}
       </div>
     )
-  } else {
+  } 
+  else if (type === 'news') {
+    return (
+      <div className="news-card">
+        {props.children}
+      </div>
+    )
+  }
+  else {
     return (
       <div className="card">
         {props.children}
