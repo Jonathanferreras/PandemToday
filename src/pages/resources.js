@@ -68,6 +68,7 @@ export default function News (props) {
     <Layout>
       <div className="resources-area">
         <h1>Get to Know your Resources</h1>
+        <p>Here is a place resources for </p>
       </div>
     </Layout>
   )

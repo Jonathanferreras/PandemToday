@@ -22,7 +22,7 @@ export default function Navbar () {
   }
 
   const renderNavBar = () => {
-    console.log(width)
+    // console.log(width)
     return (
       <React.Fragment>
         <div className="navbar-content nav-desktop">

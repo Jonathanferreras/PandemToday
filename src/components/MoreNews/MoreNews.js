@@ -31,6 +31,8 @@ export default function MoreNews () {
       })
   }, [])
 
+  
+
   const loadingAnimation = () => {
     return (
       <div className="loading bar">

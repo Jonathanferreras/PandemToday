@@ -14,6 +14,7 @@
     "@fortawesome/react-fontawesome": "^0.1.11",
     "@zeit/next-css": "^1.0.1",
     "axios": "^0.20.0",
+    "intersection-observer": "^0.12.0",
     "newsapi": "^2.4.1",
     "next": "^9.5.5",
     "qs": "^6.9.4",
